@@ -12,10 +12,10 @@ build:
 	go build -o ${BINARY}
 
 registry:
-	go build -o ${BINARY}-${VERSION}
-	zip ${BINARY}-${VERSION}
-	shasum -a 256 *.zip > ${BINARY}-${VERSION}_SHA256SUMS
-	gpg --detach-sign ${BINARY}-${VERSION}_SHA256SUMS
+	go build -o ${BINARY}_v${VERSION}
+	zip ${BINARY}_${VERSION}_${OS_ARCH}.zip ${BINARY}_v${VERSION}
+	shasum -a 256 *.zip > ${BINARY}_${VERSION}_SHA256SUMS
+	gpg --detach-sign ${BINARY}_${VERSION}_SHA256SUMS
 
 release:
 	GOOS=darwin GOARCH=amd64 go build -o ./bin/${BINARY}_${VERSION}_darwin_amd64
