@@ -1,0 +1,84 @@
+terraform-provider-xrcm-pf/examples/.terraform/
+terraform-provider-xrcm-pf/examples/.terraform/providers/infinera.com/poc/xrcm/0.0.1/linux_amd64
+terraform-provider-xrcm-pf/examples/.terraform/providers/infinera.com/poc/xrcm/0.0.1/linux_amd64
+terraform-provider-xrcm-pf/examples/.terraform.lock.hcl
+terraform-provider-xrcm-pf/~/.terraform.d/plugins/infinera.com/poc/xrcm/0.0.1/linux_amd64/terraform-provider-xrcm
+terraform-provider-xrcm-pf/examples/.terraform/providers/infinera.com/edu/xrcm/0.0.1/linux_amd64
+terraform-provider-xrcm-pf/examples/.terraform/providers/infinera.com/poc/xrcm/0.0.1/linux_amd64
+terraform-provider-xrcm-pf/examples/.terraform/providers/infinera.com/edu/xrcm/0.0.1/linux_amd64
+terraform-provider-xrcm-pf/examples/.terraform/providers/infinera.com/poc/xrcm/0.0.1/linux_amd64
+terraform-provider-xrcm-pf/examples/.terraform/providers/infinera.com/edu/xrcm/0.0.1/linux_amd64
+terraform-provider-xrcm-pf/examples/.terraform/providers/infinera.com/poc/xrcm/0.0.1/linux_amd64
+terraform-provider-xrcm-pf/examples/.terraform.lock.hcl
+terraform-provider-xrcm-pf/examples/.terraform/providers/infinera.com/poc/xrcm/0.0.1/linux_amd64
+.vscode/
+terraform-provider-xrcm_v1_linux_amd64.zip
+terraform-provider-xrcm_v1_SHA256SUMS
+terraform-provider-xrcm_v1_SHA256SUMS.sig
+terraform-provider-xrcm_v1_SHA256SUMS.sig.asc
+release/terraform-provider-xrcm_v1.0.0
+# Local .terraform directories
+**/.terraform/*
+
+# Terraform lockfile
+**.terraform.lock.hcl
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+**.tfstate
+
+# Crash log files
+crash.log
+
+# Exclude all .tfvars files, which are likely to contain sentitive data, such as
+# password, private keys, and other secrets. These should not be part of version
+# control as they are data points which are potentially sensitive and subject
+# to change depending on the environment.
+*.tfvars
+
+# Ignore override files as they are usually used to override resources locally and so
+# are not checked in
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Ignore CLI configuration files
+.terraformrc
+terraform.rc
+examples/resources/config/.terraform.lock.hcl
+examples/resources/config/.terraform.lock.hcl
+examples/resources/config/terraform.tfstate.backup
+examples/resources/dscg/terraform.tfstate.backup
+examples/resources/ac/.terraform.lock.hcl
+examples/resources/ac/.terraform.lock.hcl
+examples/resources/ac/terraform.tfstate
+examples/resources/ethernetLLDP/.terraform.lock.hcl
+examples/resources/dscg/terraform.tfstate.backup
+examples/resources/dsc/terraform.tfstate.backup
+examples/resources/dsc/.terraform.lock.hcl
+examples/resources/config/terraform.tfstate.backup
+examples/resources/config/terraform.tfstate
+examples/resources/config/.terraform.lock.hcl
+examples/resources/ac/terraform.tfstate.backup
+examples/resources/ac/terraform.tfstate
+examples/resources/dscg/terraform.tfstate.backup
+examples/resources/ac/.terraform.lock.hcl
+examples/resources/dscg/terraform.tfstate.backup
+examples/resources/ac/.terraform.lock.hcl
+examples/resources/config/.terraform.lock.hcl
+examples/resources/config/.terraform.lock.hcl
+examples/resources/config/terraform.tfstate
+examples/resources/config/terraform.tfstate.backup
+examples/resources/config/.terraform.lock.hcl
+examples/resources/config/terraform.tfstate
+examples/resources/config/terraform.tfstate.backup
+examples/resources/dsc/.terraform.lock.hcl
+
+examples/dataResources/ncs/.terraform.lock.hcl
+examples/dataResources/ncs/.terraform.lock.hcl
+examples/dataResources/ncs/terraform.tfstate
+examples/dataResources/ncs/.terraform.lock.hcl
+examples/dataResources/ncs/.terraform.lock.hcl
+examples/dataResources/ncs/terraform.tfstate

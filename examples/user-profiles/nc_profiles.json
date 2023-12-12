@@ -1,0 +1,6 @@
+{
+  "profiles" : {
+    "user_nc_profile1" : { "service_mode" : "XR-L1", "mc" : "matchOuterVID", "outer_vid" : "10,20,50..100", "implicit_transport_capacity" : "none", "labels" : {"region": "West Coast"} },
+    "user_nc_profile2" : { "service_mode" : "XR-L1", "mc" : "matchAll", "outer_vid" : "10,20,50..100", "implicit_transport_capacity" : "none", "labels" : {"region": "East Coast"} }
+  }
+}

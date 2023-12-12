@@ -1,0 +1,28 @@
+terraform {
+  required_providers {
+    ipm = {
+      source = "infinera.com/poc/ipm"
+    }
+  }
+}
+
+/*provider "ipm" {
+  username = "xr-user-1"
+  password = "infinera"
+  host     = "ipm-eval4.westus3.cloudapp.azure.com"
+}*/
+
+provider "ipm" {
+  username = "xr-user-1"
+  password = "Infinera#1"
+  host     = "sv-osgams2-dt"
+  // server 1
+}
+
+data "ipm_modules" "modules" {
+  mac_address = "3C:02:68:00:06:7C"
+}
+
+output "modules" {
+  value = data.ipm_modules.modules
+}

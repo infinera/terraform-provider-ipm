@@ -1,0 +1,18 @@
+{
+  "network_profiles" : {
+      "user_network_profile1" : { "network_config_profile": "user_network_config_profile1", "hub_config_profile": "hub_user_profile1", "leaf_config_profile":"leaf_user_profile1"}, 
+      "user_network_profile2" : { "network_config_profile": "network_config_user_profile2", "hub_config_profile": "hub_user_profile2", "leaf_config_profile":"leaf_user_profile2"}
+  },
+    
+  "network_config_profiles" : {
+    "user_network_config_profile1": { "constellation_frequency": 194000000, "modulation": "16QAM"}, 
+    "user_network_config_profile2": { "constellation_frequency": 194000000, "modulation": "QPSK"}
+  },
+  "module_config_profiles" : { 
+    "user_hub_profile1" : {"traffic_mode": "L1Mode","fiber_connection_mode": "dual", "planned_capacity" : "400G","requested_nominal_psd_offset" : "0dB","fec_iterations": "standard", "tx_clp_target" : -5 },
+    "user_hub_profile2" : {"traffic_mode": "L1Mode","fiber_connection_mode": "dual", "planned_capacity" : "400G","requested_nominal_psd_offset" : "0dB","fec_iterations": "standard", "tx_clp_target" : -5},
+    "user_leaf_profile1" : {"traffic_mode": "L1Mode","fiber_connection_mode": "dual", "planned_capacity" : "100G","requested_nominal_psd_offset" : "0dB","fec_iterations": "standard", "tx_clp_target" : -5, "fecIterations": "standard"},
+    "user_leaf_profile2" : {"traffic_mode": "L1Mode","fiber_connection_mode": "dual", "planned_capacity" : "100G","requested_nominal_psd_offset" : "0dB","fec_iterations": "standard", "tx_clp_target" : -5, "fecIterations": "standard"}
+  }
+}
+

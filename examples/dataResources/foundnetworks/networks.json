@@ -1,0 +1,1101 @@
+networks = {
+  "id" = tostring(null)
+  "networks" = tolist([
+    {
+      "config" = {
+        "constellation_frequency" = tonumber(null)
+        "managed_by" = "host"
+        "modulation" = tostring(null)
+        "name" = "test1"
+        "tc_mode" = tobool(null)
+        "topology" = tostring(null)
+      }
+      "href" = "/xr-networks/f7a37730-d417-48aa-b286-bff4ff1e5941"
+      "hub_module" = {
+        "config" = {
+          "managed_by" = "host"
+          "module" = null /* object */
+          "selector" = null /* object */
+        }
+        "href" = "/xr-networks/f7a37730-d417-48aa-b286-bff4ff1e5941/hubModule"
+        "id" = "9cac6cd4-055a-4961-be71-a35fed8518fa"
+        "state" = {
+          "endpoints" = tolist([
+            {
+              "host_port" = {
+                "chassis_id" = "16:2F:FF:00:00:00"
+                "chassis_id_subtype" = "macAddress"
+                "host_name" = tostring(null)
+                "name" = tostring(null)
+                "port_descr" = "et-1/0/0:2"
+                "port_id" = "et-1/0/0:2"
+                "port_id_subtype" = "interfaceName"
+                "port_source_mac" = "58:00:BB:00:00:12"
+                "sys_name" = "Oralando"
+              }
+              "module_if" = {
+                "client_if_aid" = "XR-T3"
+                "client_if_colid" = 3
+                "client_if_port_speed" = 100
+              }
+            },
+            {
+              "host_port" = {
+                "chassis_id" = "16:2F:FF:00:00:00"
+                "chassis_id_subtype" = "macAddress"
+                "host_name" = tostring(null)
+                "name" = tostring(null)
+                "port_descr" = "et-1/0/0:3"
+                "port_id" = "et-1/0/0:3"
+                "port_id_subtype" = "interfaceName"
+                "port_source_mac" = "58:00:BB:00:00:13"
+                "sys_name" = "Oralando"
+              }
+              "module_if" = {
+                "client_if_aid" = "XR-T4"
+                "client_if_colid" = 4
+                "client_if_port_speed" = 100
+              }
+            },
+            {
+              "host_port" = {
+                "chassis_id" = "16:2F:FF:00:00:00"
+                "chassis_id_subtype" = "macAddress"
+                "host_name" = tostring(null)
+                "name" = tostring(null)
+                "port_descr" = "et-1/0/0:0"
+                "port_id" = "et-1/0/0:0"
+                "port_id_subtype" = "interfaceName"
+                "port_source_mac" = "58:00:BB:00:00:10"
+                "sys_name" = "Oralando"
+              }
+              "module_if" = {
+                "client_if_aid" = "XR-T1"
+                "client_if_colid" = 1
+                "client_if_port_speed" = 100
+              }
+            },
+            {
+              "host_port" = {
+                "chassis_id" = "16:2F:FF:00:00:00"
+                "chassis_id_subtype" = "macAddress"
+                "host_name" = tostring(null)
+                "name" = tostring(null)
+                "port_descr" = "et-1/0/0:1"
+                "port_id" = "et-1/0/0:1"
+                "port_id_subtype" = "interfaceName"
+                "port_source_mac" = "58:00:BB:00:00:11"
+                "sys_name" = "Oralando"
+              }
+              "module_if" = {
+                "client_if_aid" = "XR-T2"
+                "client_if_colid" = 2
+                "client_if_port_speed" = 100
+              }
+            },
+          ])
+          "lifecycle_state" = "configured"
+          "lifecycle_state_cause" = null /* object */
+          "managed_by" = "host"
+          "module" = {
+            "actual_allowed_rx_cdscs" = tolist([
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+            ])
+            "actual_allowed_tx_cdscs" = tolist([
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+            ])
+            "actual_constellation_frequency" = 193300000
+            "actual_tx_clp_target" = tonumber(null)
+            "adv_line_ctrl" = "host"
+            "allowed_rx_cdscs" = tolist([])
+            "allowed_tx_cdscs" = tolist([])
+            "baud_rate" = 50
+            "capabilities" = tomap({
+              "maxDSCs" = "16"
+              "maxTxDSCs" = "16"
+            })
+            "client_port_mode" = "ethernet"
+            "config_state" = "ready"
+            "configured_role" = "hub"
+            "constellation_frequency" = 0
+            "current_role" = tostring(null)
+            "fec_iterations" = "undefined"
+            "hid" = ""
+            "host_allowed_rx_cdscs" = tolist([])
+            "host_allowed_tx_cdscs" = tolist([])
+            "host_fec_iterations" = "undefined"
+            "host_frequency" = 0
+            "host_max_dscs" = 0
+            "host_modulation" = "undefined"
+            "host_tx_clp_target" = -9900
+            "hport_id" = ""
+            "mac_address" = "00:0B:AA:AA:00:00"
+            "max_dscs" = 0
+            "modulation" = "undefined"
+            "module_id" = "dfe82597-ba8c-4263-42a0-008e02a2c6a9"
+            "module_name" = "A-LRN-Hub-Orlando"
+            "operating_fec_iterations" = "standard"
+            "operating_frequency" = 0
+            "operating_max_dscs" = 16
+            "operating_modulation" = "16QAM"
+            "role_status" = "ready"
+            "serial_number" = "000000AAAA"
+            "spectral_bandwidth" = 100
+            "tc_mode" = false
+            "topology" = "auto"
+            "traffic_mode" = "L1Mode"
+            "tx_clp_target" = tonumber(null)
+          }
+        }
+      }
+      "id" = "f7a37730-d417-48aa-b286-bff4ff1e5941"
+      "leaf_modules" = tolist([
+        {
+          "config" = {
+            "managed_by" = "host"
+            "module" = null /* object */
+            "selector" = null /* object */
+          }
+          "href" = "/xr-networks/f7a37730-d417-48aa-b286-bff4ff1e5941/leafModules/f62a057e-6dbf-4e84-887e-3355ad092624"
+          "id" = "f62a057e-6dbf-4e84-887e-3355ad092624"
+          "state" = {
+            "endpoints" = tolist([
+              {
+                "host_port" = {
+                  "chassis_id" = "16:34:FF:00:00:00"
+                  "chassis_id_subtype" = "macAddress"
+                  "host_name" = tostring(null)
+                  "name" = tostring(null)
+                  "port_descr" = "et-0/0/0:0"
+                  "port_id" = "et-0/0/0:0"
+                  "port_id_subtype" = "interfaceName"
+                  "port_source_mac" = "58:00:BB:00:01:10"
+                  "sys_name" = "Boca Raton"
+                }
+                "module_if" = {
+                  "client_if_aid" = "XR-T1"
+                  "client_if_colid" = 1
+                  "client_if_port_speed" = 100
+                }
+              },
+            ])
+            "lifecycle_state" = "configured"
+            "lifecycle_state_cause" = null /* object */
+            "managed_by" = "host"
+            "module" = {
+              "actual_allowed_rx_cdscs" = tolist([
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+              ])
+              "actual_allowed_tx_cdscs" = tolist([
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+              ])
+              "actual_constellation_frequency" = 193300000
+              "actual_tx_clp_target" = tonumber(null)
+              "adv_line_ctrl" = "host"
+              "allowed_rx_cdscs" = tolist([])
+              "allowed_tx_cdscs" = tolist([])
+              "baud_rate" = 50
+              "capabilities" = tomap(null) /* of string */
+              "client_port_mode" = "ethernet"
+              "config_state" = "ready"
+              "configured_role" = "leaf"
+              "constellation_frequency" = 0
+              "current_role" = tostring(null)
+              "fec_iterations" = "undefined"
+              "hid" = ""
+              "host_allowed_rx_cdscs" = tolist([])
+              "host_allowed_tx_cdscs" = tolist([])
+              "host_fec_iterations" = "undefined"
+              "host_frequency" = 0
+              "host_max_dscs" = 0
+              "host_modulation" = "undefined"
+              "host_tx_clp_target" = -9900
+              "hport_id" = ""
+              "mac_address" = "00:0B:AA:AA:00:01"
+              "max_dscs" = 0
+              "modulation" = "undefined"
+              "module_id" = "7bf63f5c-a621-4b13-556c-8142ee127d49"
+              "module_name" = "A-LRN-Leaf1-BR"
+              "operating_fec_iterations" = "standard"
+              "operating_frequency" = 0
+              "operating_max_dscs" = 4
+              "operating_modulation" = "16QAM"
+              "role_status" = "ready"
+              "serial_number" = "AAAA0000"
+              "spectral_bandwidth" = 100
+              "tc_mode" = false
+              "topology" = "auto"
+              "traffic_mode" = "L1Mode"
+              "tx_clp_target" = tonumber(null)
+            }
+          }
+        },
+        {
+          "config" = {
+            "managed_by" = "host"
+            "module" = null /* object */
+            "selector" = null /* object */
+          }
+          "href" = "/xr-networks/f7a37730-d417-48aa-b286-bff4ff1e5941/leafModules/2a0a20e2-6131-494a-9441-1c4e9ec2c2e3"
+          "id" = "2a0a20e2-6131-494a-9441-1c4e9ec2c2e3"
+          "state" = {
+            "endpoints" = tolist([
+              {
+                "host_port" = {
+                  "chassis_id" = "16:36:FF:00:00:00"
+                  "chassis_id_subtype" = "macAddress"
+                  "host_name" = tostring(null)
+                  "name" = tostring(null)
+                  "port_descr" = "et-0/0/0:0"
+                  "port_id" = "et-0/0/0:0"
+                  "port_id_subtype" = "interfaceName"
+                  "port_source_mac" = "58:00:BB:00:02:10"
+                  "sys_name" = "Kissimmee"
+                }
+                "module_if" = {
+                  "client_if_aid" = "XR-T1"
+                  "client_if_colid" = 1
+                  "client_if_port_speed" = 100
+                }
+              },
+            ])
+            "lifecycle_state" = "configured"
+            "lifecycle_state_cause" = null /* object */
+            "managed_by" = "host"
+            "module" = {
+              "actual_allowed_rx_cdscs" = tolist([
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+              ])
+              "actual_allowed_tx_cdscs" = tolist([
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+              ])
+              "actual_constellation_frequency" = 193300000
+              "actual_tx_clp_target" = tonumber(null)
+              "adv_line_ctrl" = "host"
+              "allowed_rx_cdscs" = tolist([])
+              "allowed_tx_cdscs" = tolist([])
+              "baud_rate" = 50
+              "capabilities" = tomap(null) /* of string */
+              "client_port_mode" = "ethernet"
+              "config_state" = "ready"
+              "configured_role" = "leaf"
+              "constellation_frequency" = 0
+              "current_role" = tostring(null)
+              "fec_iterations" = "undefined"
+              "hid" = ""
+              "host_allowed_rx_cdscs" = tolist([])
+              "host_allowed_tx_cdscs" = tolist([])
+              "host_fec_iterations" = "undefined"
+              "host_frequency" = 0
+              "host_max_dscs" = 0
+              "host_modulation" = "undefined"
+              "host_tx_clp_target" = -9900
+              "hport_id" = ""
+              "mac_address" = "00:0B:AA:AA:00:02"
+              "max_dscs" = 0
+              "modulation" = "undefined"
+              "module_id" = "ea8a4bef-a9b4-4aa2-5dbb-1900e526dec0"
+              "module_name" = "A-LRN-Leaf2-KS"
+              "operating_fec_iterations" = "standard"
+              "operating_frequency" = 0
+              "operating_max_dscs" = 4
+              "operating_modulation" = "16QAM"
+              "role_status" = "ready"
+              "serial_number" = "AAAA0002"
+              "spectral_bandwidth" = 100
+              "tc_mode" = false
+              "topology" = "auto"
+              "traffic_mode" = "L1Mode"
+              "tx_clp_target" = tonumber(null)
+            }
+          }
+        },
+        {
+          "config" = {
+            "managed_by" = "host"
+            "module" = null /* object */
+            "selector" = null /* object */
+          }
+          "href" = "/xr-networks/f7a37730-d417-48aa-b286-bff4ff1e5941/leafModules/358f5c01-319d-4363-8487-fafc247785d5"
+          "id" = "358f5c01-319d-4363-8487-fafc247785d5"
+          "state" = {
+            "endpoints" = tolist([
+              {
+                "host_port" = {
+                  "chassis_id" = "16:38:FF:00:00:00"
+                  "chassis_id_subtype" = "macAddress"
+                  "host_name" = tostring(null)
+                  "name" = tostring(null)
+                  "port_descr" = "et-0/0/0:0"
+                  "port_id" = "et-0/0/0:0"
+                  "port_id_subtype" = "interfaceName"
+                  "port_source_mac" = "58:00:BB:00:03:10"
+                  "sys_name" = "Fort Lauderdale"
+                }
+                "module_if" = {
+                  "client_if_aid" = "XR-T1"
+                  "client_if_colid" = 1
+                  "client_if_port_speed" = 100
+                }
+              },
+            ])
+            "lifecycle_state" = "configured"
+            "lifecycle_state_cause" = null /* object */
+            "managed_by" = "host"
+            "module" = {
+              "actual_allowed_rx_cdscs" = tolist([
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+              ])
+              "actual_allowed_tx_cdscs" = tolist([
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+              ])
+              "actual_constellation_frequency" = 193300000
+              "actual_tx_clp_target" = tonumber(null)
+              "adv_line_ctrl" = "host"
+              "allowed_rx_cdscs" = tolist([])
+              "allowed_tx_cdscs" = tolist([])
+              "baud_rate" = 50
+              "capabilities" = tomap(null) /* of string */
+              "client_port_mode" = "ethernet"
+              "config_state" = "ready"
+              "configured_role" = "leaf"
+              "constellation_frequency" = 0
+              "current_role" = tostring(null)
+              "fec_iterations" = "undefined"
+              "hid" = ""
+              "host_allowed_rx_cdscs" = tolist([])
+              "host_allowed_tx_cdscs" = tolist([])
+              "host_fec_iterations" = "undefined"
+              "host_frequency" = 0
+              "host_max_dscs" = 0
+              "host_modulation" = "undefined"
+              "host_tx_clp_target" = -9900
+              "hport_id" = ""
+              "mac_address" = "00:0B:AA:AA:00:03"
+              "max_dscs" = 0
+              "modulation" = "undefined"
+              "module_id" = "492a6337-1871-44bc-436d-cc9e6ff619be"
+              "module_name" = "A-LRN-Leaf3-FL"
+              "operating_fec_iterations" = "standard"
+              "operating_frequency" = 0
+              "operating_max_dscs" = 4
+              "operating_modulation" = "16QAM"
+              "role_status" = "ready"
+              "serial_number" = "AAAA0003"
+              "spectral_bandwidth" = 100
+              "tc_mode" = false
+              "topology" = "auto"
+              "traffic_mode" = "L1Mode"
+              "tx_clp_target" = tonumber(null)
+            }
+          }
+        },
+        {
+          "config" = {
+            "managed_by" = "host"
+            "module" = null /* object */
+            "selector" = null /* object */
+          }
+          "href" = "/xr-networks/f7a37730-d417-48aa-b286-bff4ff1e5941/leafModules/f40c163f-498e-4e00-ab07-962dd79fbb9a"
+          "id" = "f40c163f-498e-4e00-ab07-962dd79fbb9a"
+          "state" = {
+            "endpoints" = tolist([
+              {
+                "host_port" = null /* object */
+                "module_if" = {
+                  "client_if_aid" = "XR-T1"
+                  "client_if_colid" = 1
+                  "client_if_port_speed" = 100
+                }
+              },
+            ])
+            "lifecycle_state" = "configured"
+            "lifecycle_state_cause" = null /* object */
+            "managed_by" = "host"
+            "module" = {
+              "actual_allowed_rx_cdscs" = tolist([
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+              ])
+              "actual_allowed_tx_cdscs" = tolist([
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+              ])
+              "actual_constellation_frequency" = 193300000
+              "actual_tx_clp_target" = tonumber(null)
+              "adv_line_ctrl" = "host"
+              "allowed_rx_cdscs" = tolist([])
+              "allowed_tx_cdscs" = tolist([])
+              "baud_rate" = 50
+              "capabilities" = tomap(null) /* of string */
+              "client_port_mode" = "ethernet"
+              "config_state" = "ready"
+              "configured_role" = "leaf"
+              "constellation_frequency" = 0
+              "current_role" = tostring(null)
+              "fec_iterations" = "undefined"
+              "hid" = ""
+              "host_allowed_rx_cdscs" = tolist([])
+              "host_allowed_tx_cdscs" = tolist([])
+              "host_fec_iterations" = "undefined"
+              "host_frequency" = 0
+              "host_max_dscs" = 0
+              "host_modulation" = "undefined"
+              "host_tx_clp_target" = -9900
+              "hport_id" = ""
+              "mac_address" = "00:0B:AA:AA:00:04"
+              "max_dscs" = 0
+              "modulation" = "undefined"
+              "module_id" = "198de2a4-fb03-47e4-420d-1ef7262294f3"
+              "module_name" = "A-LRN-Leaf4-MI"
+              "operating_fec_iterations" = "standard"
+              "operating_frequency" = 0
+              "operating_max_dscs" = 4
+              "operating_modulation" = "16QAM"
+              "role_status" = "ready"
+              "serial_number" = "AAAA0004"
+              "spectral_bandwidth" = 100
+              "tc_mode" = false
+              "topology" = "auto"
+              "traffic_mode" = "L1Mode"
+              "tx_clp_target" = tonumber(null)
+            }
+          }
+        },
+      ])
+      "reachable_modules" = tolist([
+        {
+          "href" = "/xr-networks/f7a37730-d417-48aa-b286-bff4ff1e5941/reachableModules/3fc3c240-78be-4264-bc56-406adefd8c9a"
+          "id" = "3fc3c240-78be-4264-bc56-406adefd8c9a"
+          "state" = {
+            "endpoints" = tolist([
+              {
+                "host_port" = {
+                  "chassis_id" = "16:34:FF:00:00:00"
+                  "chassis_id_subtype" = "macAddress"
+                  "host_name" = tostring(null)
+                  "name" = tostring(null)
+                  "port_descr" = "et-0/0/0:0"
+                  "port_id" = "et-0/0/0:0"
+                  "port_id_subtype" = "interfaceName"
+                  "port_source_mac" = "58:00:BB:00:01:10"
+                  "sys_name" = "Boca Raton"
+                }
+                "module_if" = {
+                  "client_if_aid" = "XR-T1"
+                  "client_if_colid" = 1
+                  "client_if_port_speed" = 100
+                }
+              },
+            ])
+            "lifecycle_state" = tostring(null)
+            "lifecycle_state_cause" = null /* object */
+            "managed_by" = tostring(null)
+            "module" = {
+              "actual_allowed_rx_cdscs" = tolist([
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+              ])
+              "actual_allowed_tx_cdscs" = tolist([
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+              ])
+              "actual_constellation_frequency" = 193300000
+              "actual_tx_clp_target" = tonumber(null)
+              "adv_line_ctrl" = "host"
+              "allowed_rx_cdscs" = tolist([])
+              "allowed_tx_cdscs" = tolist([])
+              "baud_rate" = 50
+              "capabilities" = tomap({
+                "maxDSCs" = "16"
+                "maxTxDSCs" = "16"
+              })
+              "client_port_mode" = "ethernet"
+              "config_state" = "ready"
+              "configured_role" = "leaf"
+              "constellation_frequency" = 0
+              "current_role" = tostring(null)
+              "fec_iterations" = "undefined"
+              "hid" = ""
+              "host_allowed_rx_cdscs" = tolist([])
+              "host_allowed_tx_cdscs" = tolist([])
+              "host_fec_iterations" = "undefined"
+              "host_frequency" = 0
+              "host_max_dscs" = 0
+              "host_modulation" = "undefined"
+              "host_tx_clp_target" = -9900
+              "hport_id" = ""
+              "mac_address" = "00:0B:AA:AA:00:01"
+              "max_dscs" = 0
+              "modulation" = "undefined"
+              "module_id" = "7bf63f5c-a621-4b13-556c-8142ee127d49"
+              "module_name" = "A-LRN-Leaf1-BR"
+              "operating_fec_iterations" = "standard"
+              "operating_frequency" = 0
+              "operating_max_dscs" = 4
+              "operating_modulation" = "16QAM"
+              "role_status" = "ready"
+              "serial_number" = "AAAA0000"
+              "spectral_bandwidth" = 100
+              "tc_mode" = false
+              "topology" = "auto"
+              "traffic_mode" = "L1Mode"
+              "tx_clp_target" = tonumber(null)
+            }
+          }
+        },
+        {
+          "href" = "/xr-networks/f7a37730-d417-48aa-b286-bff4ff1e5941/reachableModules/5399451d-5667-4c1b-821f-cd62168a5143"
+          "id" = "5399451d-5667-4c1b-821f-cd62168a5143"
+          "state" = {
+            "endpoints" = tolist([
+              {
+                "host_port" = {
+                  "chassis_id" = "16:36:FF:00:00:00"
+                  "chassis_id_subtype" = "macAddress"
+                  "host_name" = tostring(null)
+                  "name" = tostring(null)
+                  "port_descr" = "et-0/0/0:0"
+                  "port_id" = "et-0/0/0:0"
+                  "port_id_subtype" = "interfaceName"
+                  "port_source_mac" = "58:00:BB:00:02:10"
+                  "sys_name" = "Kissimmee"
+                }
+                "module_if" = {
+                  "client_if_aid" = "XR-T1"
+                  "client_if_colid" = 1
+                  "client_if_port_speed" = 100
+                }
+              },
+            ])
+            "lifecycle_state" = tostring(null)
+            "lifecycle_state_cause" = null /* object */
+            "managed_by" = tostring(null)
+            "module" = {
+              "actual_allowed_rx_cdscs" = tolist([
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+              ])
+              "actual_allowed_tx_cdscs" = tolist([
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+              ])
+              "actual_constellation_frequency" = 193300000
+              "actual_tx_clp_target" = tonumber(null)
+              "adv_line_ctrl" = "host"
+              "allowed_rx_cdscs" = tolist([])
+              "allowed_tx_cdscs" = tolist([])
+              "baud_rate" = 50
+              "capabilities" = tomap({
+                "maxDSCs" = "16"
+                "maxTxDSCs" = "16"
+              })
+              "client_port_mode" = "ethernet"
+              "config_state" = "ready"
+              "configured_role" = "leaf"
+              "constellation_frequency" = 0
+              "current_role" = tostring(null)
+              "fec_iterations" = "undefined"
+              "hid" = ""
+              "host_allowed_rx_cdscs" = tolist([])
+              "host_allowed_tx_cdscs" = tolist([])
+              "host_fec_iterations" = "undefined"
+              "host_frequency" = 0
+              "host_max_dscs" = 0
+              "host_modulation" = "undefined"
+              "host_tx_clp_target" = -9900
+              "hport_id" = ""
+              "mac_address" = "00:0B:AA:AA:00:02"
+              "max_dscs" = 0
+              "modulation" = "undefined"
+              "module_id" = "ea8a4bef-a9b4-4aa2-5dbb-1900e526dec0"
+              "module_name" = "A-LRN-Leaf2-KS"
+              "operating_fec_iterations" = "standard"
+              "operating_frequency" = 0
+              "operating_max_dscs" = 4
+              "operating_modulation" = "16QAM"
+              "role_status" = "ready"
+              "serial_number" = "AAAA0002"
+              "spectral_bandwidth" = 100
+              "tc_mode" = false
+              "topology" = "auto"
+              "traffic_mode" = "L1Mode"
+              "tx_clp_target" = tonumber(null)
+            }
+          }
+        },
+        {
+          "href" = "/xr-networks/f7a37730-d417-48aa-b286-bff4ff1e5941/reachableModules/a1544c17-515a-4841-8f12-e31ff7bd67b8"
+          "id" = "a1544c17-515a-4841-8f12-e31ff7bd67b8"
+          "state" = {
+            "endpoints" = tolist([
+              {
+                "host_port" = {
+                  "chassis_id" = "16:38:FF:00:00:00"
+                  "chassis_id_subtype" = "macAddress"
+                  "host_name" = tostring(null)
+                  "name" = tostring(null)
+                  "port_descr" = "et-0/0/0:0"
+                  "port_id" = "et-0/0/0:0"
+                  "port_id_subtype" = "interfaceName"
+                  "port_source_mac" = "58:00:BB:00:03:10"
+                  "sys_name" = "Fort Lauderdale"
+                }
+                "module_if" = {
+                  "client_if_aid" = "XR-T1"
+                  "client_if_colid" = 1
+                  "client_if_port_speed" = 100
+                }
+              },
+            ])
+            "lifecycle_state" = tostring(null)
+            "lifecycle_state_cause" = null /* object */
+            "managed_by" = tostring(null)
+            "module" = {
+              "actual_allowed_rx_cdscs" = tolist([
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+              ])
+              "actual_allowed_tx_cdscs" = tolist([
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+              ])
+              "actual_constellation_frequency" = 193300000
+              "actual_tx_clp_target" = tonumber(null)
+              "adv_line_ctrl" = "host"
+              "allowed_rx_cdscs" = tolist([])
+              "allowed_tx_cdscs" = tolist([])
+              "baud_rate" = 50
+              "capabilities" = tomap({
+                "maxDSCs" = "16"
+                "maxTxDSCs" = "16"
+              })
+              "client_port_mode" = "ethernet"
+              "config_state" = "ready"
+              "configured_role" = "leaf"
+              "constellation_frequency" = 0
+              "current_role" = tostring(null)
+              "fec_iterations" = "undefined"
+              "hid" = ""
+              "host_allowed_rx_cdscs" = tolist([])
+              "host_allowed_tx_cdscs" = tolist([])
+              "host_fec_iterations" = "undefined"
+              "host_frequency" = 0
+              "host_max_dscs" = 0
+              "host_modulation" = "undefined"
+              "host_tx_clp_target" = -9900
+              "hport_id" = ""
+              "mac_address" = "00:0B:AA:AA:00:03"
+              "max_dscs" = 0
+              "modulation" = "undefined"
+              "module_id" = "492a6337-1871-44bc-436d-cc9e6ff619be"
+              "module_name" = "A-LRN-Leaf3-FL"
+              "operating_fec_iterations" = "standard"
+              "operating_frequency" = 0
+              "operating_max_dscs" = 4
+              "operating_modulation" = "16QAM"
+              "role_status" = "ready"
+              "serial_number" = "AAAA0003"
+              "spectral_bandwidth" = 100
+              "tc_mode" = false
+              "topology" = "auto"
+              "traffic_mode" = "L1Mode"
+              "tx_clp_target" = tonumber(null)
+            }
+          }
+        },
+        {
+          "href" = "/xr-networks/f7a37730-d417-48aa-b286-bff4ff1e5941/reachableModules/380acc7e-53b4-4967-bef9-e8e5bf58f6ab"
+          "id" = "380acc7e-53b4-4967-bef9-e8e5bf58f6ab"
+          "state" = {
+            "endpoints" = tolist([
+              {
+                "host_port" = null /* object */
+                "module_if" = {
+                  "client_if_aid" = "XR-T1"
+                  "client_if_colid" = 1
+                  "client_if_port_speed" = 100
+                }
+              },
+            ])
+            "lifecycle_state" = tostring(null)
+            "lifecycle_state_cause" = null /* object */
+            "managed_by" = tostring(null)
+            "module" = {
+              "actual_allowed_rx_cdscs" = tolist([
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+              ])
+              "actual_allowed_tx_cdscs" = tolist([
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+              ])
+              "actual_constellation_frequency" = 193300000
+              "actual_tx_clp_target" = tonumber(null)
+              "adv_line_ctrl" = "host"
+              "allowed_rx_cdscs" = tolist([])
+              "allowed_tx_cdscs" = tolist([])
+              "baud_rate" = 50
+              "capabilities" = tomap({
+                "maxDSCs" = "16"
+                "maxTxDSCs" = "16"
+              })
+              "client_port_mode" = "ethernet"
+              "config_state" = "ready"
+              "configured_role" = "leaf"
+              "constellation_frequency" = 0
+              "current_role" = tostring(null)
+              "fec_iterations" = "undefined"
+              "hid" = ""
+              "host_allowed_rx_cdscs" = tolist([])
+              "host_allowed_tx_cdscs" = tolist([])
+              "host_fec_iterations" = "undefined"
+              "host_frequency" = 0
+              "host_max_dscs" = 0
+              "host_modulation" = "undefined"
+              "host_tx_clp_target" = -9900
+              "hport_id" = ""
+              "mac_address" = "00:0B:AA:AA:00:04"
+              "max_dscs" = 0
+              "modulation" = "undefined"
+              "module_id" = "198de2a4-fb03-47e4-420d-1ef7262294f3"
+              "module_name" = "A-LRN-Leaf4-MI"
+              "operating_fec_iterations" = "standard"
+              "operating_frequency" = 0
+              "operating_max_dscs" = 4
+              "operating_modulation" = "16QAM"
+              "role_status" = "ready"
+              "serial_number" = "AAAA0004"
+              "spectral_bandwidth" = 100
+              "tc_mode" = false
+              "topology" = "auto"
+              "traffic_mode" = "L1Mode"
+              "tx_clp_target" = tonumber(null)
+            }
+          }
+        },
+      ])
+      "state" = {
+        "available_services" = tolist(null) /* of object */
+        "constellation_frequency" = 0
+        "control_links" = tolist([
+          {
+            "con_state" = "active"
+            "destination_module_id" = "7bf63f5c-a621-4b13-556c-8142ee127d49"
+            "last_con_state_change" = "2023-08-09T05:42:47Z"
+            "source_module_id" = "dfe82597-ba8c-4263-42a0-008e02a2c6a9"
+          },
+          {
+            "con_state" = "active"
+            "destination_module_id" = "dfe82597-ba8c-4263-42a0-008e02a2c6a9"
+            "last_con_state_change" = "2023-08-09T05:42:47Z"
+            "source_module_id" = "7bf63f5c-a621-4b13-556c-8142ee127d49"
+          },
+          {
+            "con_state" = "active"
+            "destination_module_id" = "ea8a4bef-a9b4-4aa2-5dbb-1900e526dec0"
+            "last_con_state_change" = "2023-08-09T05:42:47Z"
+            "source_module_id" = "dfe82597-ba8c-4263-42a0-008e02a2c6a9"
+          },
+          {
+            "con_state" = "active"
+            "destination_module_id" = "dfe82597-ba8c-4263-42a0-008e02a2c6a9"
+            "last_con_state_change" = "2023-08-09T05:42:47Z"
+            "source_module_id" = "ea8a4bef-a9b4-4aa2-5dbb-1900e526dec0"
+          },
+          {
+            "con_state" = "active"
+            "destination_module_id" = "492a6337-1871-44bc-436d-cc9e6ff619be"
+            "last_con_state_change" = "2023-08-09T05:42:47Z"
+            "source_module_id" = "dfe82597-ba8c-4263-42a0-008e02a2c6a9"
+          },
+          {
+            "con_state" = "active"
+            "destination_module_id" = "dfe82597-ba8c-4263-42a0-008e02a2c6a9"
+            "last_con_state_change" = "2023-08-09T05:42:47Z"
+            "source_module_id" = "492a6337-1871-44bc-436d-cc9e6ff619be"
+          },
+          {
+            "con_state" = "active"
+            "destination_module_id" = "198de2a4-fb03-47e4-420d-1ef7262294f3"
+            "last_con_state_change" = "2023-08-09T05:42:47Z"
+            "source_module_id" = "dfe82597-ba8c-4263-42a0-008e02a2c6a9"
+          },
+          {
+            "con_state" = "active"
+            "destination_module_id" = "dfe82597-ba8c-4263-42a0-008e02a2c6a9"
+            "last_con_state_change" = "2023-08-09T05:42:47Z"
+            "source_module_id" = "198de2a4-fb03-47e4-420d-1ef7262294f3"
+          },
+        ])
+        "lifecycle_state" = "configured"
+        "lifecycle_state_cause" = null /* object */
+        "managed_by" = "host"
+        "modulation" = "undefined"
+        "name" = "test1"
+        "tc_mode" = false
+        "topology" = "auto"
+      }
+    },
+  ])
+}

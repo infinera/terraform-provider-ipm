@@ -1,0 +1,19 @@
+version: "3.8"
+
+networks:
+  xrnet:
+    driver: "bridge"
+
+services:
+  tfRegA:
+    image: sv-artifactory.infinera.com/marvel/ipm/ipm-tf:v1.3.0
+    container_name: tfRegA
+    environment:
+      TF_VAR_user: test
+      TF_VAR_password: test
+      TF_VAR_host: https://sv-kube-prd.infinera.com
+    tty: true
+    volumes:
+      - $PWD/sample-nf/regTest:/network-fulfillment/
+    networks:
+      - xrnet

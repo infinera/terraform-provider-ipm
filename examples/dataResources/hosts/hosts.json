@@ -1,0 +1,332 @@
+hosts = {
+  "hosts" = tolist([
+    {
+      "config" = {
+        "labels" = tomap(null) /* of string */
+        "location" = null /* object */
+        "managed_by" = "host"
+        "name" = tostring(null)
+        "selector" = null /* object */
+      }
+      "href" = "/hosts/00b8e6a3-b906-4641-bc11-874b03c15f97"
+      "id" = "00b8e6a3-b906-4641-bc11-874b03c15f97"
+      "ports" = tolist([
+        {
+          "config" = {
+            "labels" = tomap(null) /* of string */
+            "managed_by" = "host"
+            "name" = tostring(null)
+            "selector" = null /* object */
+          }
+          "href" = "/hosts/00b8e6a3-b906-4641-bc11-874b03c15f97/ports/63721c9c-7e9c-4d23-b2ae-8f78fe31ac93"
+          "id" = "63721c9c-7e9c-4d23-b2ae-8f78fe31ac93"
+          "state" = {
+            "chassis_id" = "16:34:FF:00:00:00"
+            "chassis_id_subtype" = "macAddress"
+            "host_name" = tostring(null)
+            "labels" = tomap(null) /* of string */
+            "lldp_state" = "Unknown"
+            "managed_by" = "host"
+            "module_if" = {
+              "client_if_aid" = "XR-T1"
+              "client_if_col_id" = 1
+              "client_if_port_speed" = 100
+              "current_role" = "leaf"
+              "module_id" = "7bf63f5c-a621-4b13-556c-8142ee127d49"
+              "module_name" = "A-LRN-Leaf1-BR"
+              "serial_number" = "AAAA0000"
+            }
+            "name" = tostring(null)
+            "port_descr" = "et-0/0/0:0"
+            "port_id" = "et-0/0/0:0"
+            "port_id_sub_type" = "interfaceName"
+            "port_source_mac" = "58:00:BB:00:01:10"
+            "sys_name" = "Boca Raton"
+          }
+        },
+      ])
+      "state" = {
+        "chassis_id" = "16:34:FF:00:00:00"
+        "chassis_id_subtype" = "macAddress"
+        "labels" = tomap(null) /* of string */
+        "lldp_state" = "Unknown"
+        "location" = null /* object */
+        "managed_by" = "host"
+        "name" = tostring(null)
+        "sys_descr" = "BR Leaf Router"
+        "sys_name" = "Boca Raton"
+      }
+    },
+    {
+      "config" = {
+        "labels" = tomap(null) /* of string */
+        "location" = null /* object */
+        "managed_by" = "host"
+        "name" = tostring(null)
+        "selector" = null /* object */
+      }
+      "href" = "/hosts/6a7119fb-7408-4cf5-a24b-7e625a3d9845"
+      "id" = "6a7119fb-7408-4cf5-a24b-7e625a3d9845"
+      "ports" = tolist([
+        {
+          "config" = {
+            "labels" = tomap(null) /* of string */
+            "managed_by" = "host"
+            "name" = tostring(null)
+            "selector" = null /* object */
+          }
+          "href" = "/hosts/6a7119fb-7408-4cf5-a24b-7e625a3d9845/ports/d87a210f-23fc-4d20-abef-0cb4fa2ada41"
+          "id" = "d87a210f-23fc-4d20-abef-0cb4fa2ada41"
+          "state" = {
+            "chassis_id" = "16:38:FF:00:00:00"
+            "chassis_id_subtype" = "macAddress"
+            "host_name" = tostring(null)
+            "labels" = tomap(null) /* of string */
+            "lldp_state" = "Unknown"
+            "managed_by" = "host"
+            "module_if" = {
+              "client_if_aid" = "XR-T1"
+              "client_if_col_id" = 1
+              "client_if_port_speed" = 100
+              "current_role" = "leaf"
+              "module_id" = "492a6337-1871-44bc-436d-cc9e6ff619be"
+              "module_name" = "A-LRN-Leaf3-FL"
+              "serial_number" = "AAAA0003"
+            }
+            "name" = tostring(null)
+            "port_descr" = "et-0/0/0:0"
+            "port_id" = "et-0/0/0:0"
+            "port_id_sub_type" = "interfaceName"
+            "port_source_mac" = "58:00:BB:00:03:10"
+            "sys_name" = "Fort Lauderdale"
+          }
+        },
+      ])
+      "state" = {
+        "chassis_id" = "16:38:FF:00:00:00"
+        "chassis_id_subtype" = "macAddress"
+        "labels" = tomap(null) /* of string */
+        "lldp_state" = "Unknown"
+        "location" = null /* object */
+        "managed_by" = "host"
+        "name" = tostring(null)
+        "sys_descr" = "FL Leaf Router"
+        "sys_name" = "Fort Lauderdale"
+      }
+    },
+    {
+      "config" = {
+        "labels" = tomap(null) /* of string */
+        "location" = null /* object */
+        "managed_by" = "host"
+        "name" = tostring(null)
+        "selector" = null /* object */
+      }
+      "href" = "/hosts/eedccf1c-d8be-42f2-8a35-79239037f6c7"
+      "id" = "eedccf1c-d8be-42f2-8a35-79239037f6c7"
+      "ports" = tolist([
+        {
+          "config" = {
+            "labels" = tomap(null) /* of string */
+            "managed_by" = "host"
+            "name" = tostring(null)
+            "selector" = null /* object */
+          }
+          "href" = "/hosts/eedccf1c-d8be-42f2-8a35-79239037f6c7/ports/ad86da1a-3877-44d1-85f9-95493546b450"
+          "id" = "ad86da1a-3877-44d1-85f9-95493546b450"
+          "state" = {
+            "chassis_id" = "16:36:FF:00:00:00"
+            "chassis_id_subtype" = "macAddress"
+            "host_name" = tostring(null)
+            "labels" = tomap(null) /* of string */
+            "lldp_state" = "Unknown"
+            "managed_by" = "host"
+            "module_if" = {
+              "client_if_aid" = "XR-T1"
+              "client_if_col_id" = 1
+              "client_if_port_speed" = 100
+              "current_role" = "leaf"
+              "module_id" = "ea8a4bef-a9b4-4aa2-5dbb-1900e526dec0"
+              "module_name" = "A-LRN-Leaf2-KS"
+              "serial_number" = "AAAA0002"
+            }
+            "name" = tostring(null)
+            "port_descr" = "et-0/0/0:0"
+            "port_id" = "et-0/0/0:0"
+            "port_id_sub_type" = "interfaceName"
+            "port_source_mac" = "58:00:BB:00:02:10"
+            "sys_name" = "Kissimmee"
+          }
+        },
+      ])
+      "state" = {
+        "chassis_id" = "16:36:FF:00:00:00"
+        "chassis_id_subtype" = "macAddress"
+        "labels" = tomap(null) /* of string */
+        "lldp_state" = "Unknown"
+        "location" = null /* object */
+        "managed_by" = "host"
+        "name" = tostring(null)
+        "sys_descr" = "KS Leaf Router"
+        "sys_name" = "Kissimmee"
+      }
+    },
+    {
+      "config" = {
+        "labels" = tomap(null) /* of string */
+        "location" = null /* object */
+        "managed_by" = "host"
+        "name" = tostring(null)
+        "selector" = null /* object */
+      }
+      "href" = "/hosts/0f9e760e-f404-4c57-8e0c-276238a214d6"
+      "id" = "0f9e760e-f404-4c57-8e0c-276238a214d6"
+      "ports" = tolist([
+        {
+          "config" = {
+            "labels" = tomap(null) /* of string */
+            "managed_by" = "host"
+            "name" = tostring(null)
+            "selector" = null /* object */
+          }
+          "href" = "/hosts/0f9e760e-f404-4c57-8e0c-276238a214d6/ports/c01ad077-d8f1-4dbc-b9b1-2623a79e59a8"
+          "id" = "c01ad077-d8f1-4dbc-b9b1-2623a79e59a8"
+          "state" = {
+            "chassis_id" = "16:2F:FF:00:00:00"
+            "chassis_id_subtype" = "macAddress"
+            "host_name" = tostring(null)
+            "labels" = tomap(null) /* of string */
+            "lldp_state" = "Unknown"
+            "managed_by" = "host"
+            "module_if" = {
+              "client_if_aid" = "XR-T1"
+              "client_if_col_id" = 1
+              "client_if_port_speed" = 100
+              "current_role" = "hub"
+              "module_id" = "dfe82597-ba8c-4263-42a0-008e02a2c6a9"
+              "module_name" = "A-LRN-Hub-Orlando"
+              "serial_number" = "000000AAAA"
+            }
+            "name" = tostring(null)
+            "port_descr" = "et-1/0/0:0"
+            "port_id" = "et-1/0/0:0"
+            "port_id_sub_type" = "interfaceName"
+            "port_source_mac" = "58:00:BB:00:00:10"
+            "sys_name" = "Oralando"
+          }
+        },
+        {
+          "config" = {
+            "labels" = tomap(null) /* of string */
+            "managed_by" = "host"
+            "name" = tostring(null)
+            "selector" = null /* object */
+          }
+          "href" = "/hosts/0f9e760e-f404-4c57-8e0c-276238a214d6/ports/d48a4728-479d-4844-b0ee-3ea286df0263"
+          "id" = "d48a4728-479d-4844-b0ee-3ea286df0263"
+          "state" = {
+            "chassis_id" = "16:2F:FF:00:00:00"
+            "chassis_id_subtype" = "macAddress"
+            "host_name" = tostring(null)
+            "labels" = tomap(null) /* of string */
+            "lldp_state" = "Unknown"
+            "managed_by" = "host"
+            "module_if" = {
+              "client_if_aid" = "XR-T2"
+              "client_if_col_id" = 2
+              "client_if_port_speed" = 100
+              "current_role" = "hub"
+              "module_id" = "dfe82597-ba8c-4263-42a0-008e02a2c6a9"
+              "module_name" = "A-LRN-Hub-Orlando"
+              "serial_number" = "000000AAAA"
+            }
+            "name" = tostring(null)
+            "port_descr" = "et-1/0/0:1"
+            "port_id" = "et-1/0/0:1"
+            "port_id_sub_type" = "interfaceName"
+            "port_source_mac" = "58:00:BB:00:00:11"
+            "sys_name" = "Oralando"
+          }
+        },
+        {
+          "config" = {
+            "labels" = tomap(null) /* of string */
+            "managed_by" = "host"
+            "name" = tostring(null)
+            "selector" = null /* object */
+          }
+          "href" = "/hosts/0f9e760e-f404-4c57-8e0c-276238a214d6/ports/e3562e4e-0b54-4b0e-8e7d-3cd12102cc5f"
+          "id" = "e3562e4e-0b54-4b0e-8e7d-3cd12102cc5f"
+          "state" = {
+            "chassis_id" = "16:2F:FF:00:00:00"
+            "chassis_id_subtype" = "macAddress"
+            "host_name" = tostring(null)
+            "labels" = tomap(null) /* of string */
+            "lldp_state" = "Unknown"
+            "managed_by" = "host"
+            "module_if" = {
+              "client_if_aid" = "XR-T3"
+              "client_if_col_id" = 3
+              "client_if_port_speed" = 100
+              "current_role" = "hub"
+              "module_id" = "dfe82597-ba8c-4263-42a0-008e02a2c6a9"
+              "module_name" = "A-LRN-Hub-Orlando"
+              "serial_number" = "000000AAAA"
+            }
+            "name" = tostring(null)
+            "port_descr" = "et-1/0/0:2"
+            "port_id" = "et-1/0/0:2"
+            "port_id_sub_type" = "interfaceName"
+            "port_source_mac" = "58:00:BB:00:00:12"
+            "sys_name" = "Oralando"
+          }
+        },
+        {
+          "config" = {
+            "labels" = tomap(null) /* of string */
+            "managed_by" = "host"
+            "name" = tostring(null)
+            "selector" = null /* object */
+          }
+          "href" = "/hosts/0f9e760e-f404-4c57-8e0c-276238a214d6/ports/482c2646-89dc-4f6d-aab4-89772f67d016"
+          "id" = "482c2646-89dc-4f6d-aab4-89772f67d016"
+          "state" = {
+            "chassis_id" = "16:2F:FF:00:00:00"
+            "chassis_id_subtype" = "macAddress"
+            "host_name" = tostring(null)
+            "labels" = tomap(null) /* of string */
+            "lldp_state" = "Unknown"
+            "managed_by" = "host"
+            "module_if" = {
+              "client_if_aid" = "XR-T4"
+              "client_if_col_id" = 4
+              "client_if_port_speed" = 100
+              "current_role" = "hub"
+              "module_id" = "dfe82597-ba8c-4263-42a0-008e02a2c6a9"
+              "module_name" = "A-LRN-Hub-Orlando"
+              "serial_number" = "000000AAAA"
+            }
+            "name" = tostring(null)
+            "port_descr" = "et-1/0/0:3"
+            "port_id" = "et-1/0/0:3"
+            "port_id_sub_type" = "interfaceName"
+            "port_source_mac" = "58:00:BB:00:00:13"
+            "sys_name" = "Oralando"
+          }
+        },
+      ])
+      "state" = {
+        "chassis_id" = "16:2F:FF:00:00:00"
+        "chassis_id_subtype" = "macAddress"
+        "labels" = tomap(null) /* of string */
+        "lldp_state" = "Unknown"
+        "location" = null /* object */
+        "managed_by" = "host"
+        "name" = tostring(null)
+        "sys_descr" = "Hub Router"
+        "sys_name" = "Oralando"
+      }
+    },
+  ])
+  "id" = tostring(null)
+}

@@ -1,0 +1,528 @@
+ndus = {
+  "id" = tostring(null)
+  "ndus" = tolist([
+    {
+      "config" = null /* object */
+      "ethernets" = tolist([
+        {
+          "col_id" = 1
+          "config" = null /* object */
+          "href" = "/ndus/6dd9fe58-45cc-4d5e-5f8c-26adb44b53fc/ethernets/1"
+          "id" = "0a63b268-1248-4570-b114-93aa30d7e03f"
+          "module_id" = "6dd9fe58-45cc-4d5e-5f8c-26adb44b53fc"
+          "state" = {
+            "client_if_aid" = "NDU-E1"
+            "diagnostics" = {
+              "fac_lb" = "disabled"
+              "fac_lb_duration" = 0
+              "fac_test_signal_gen" = "disabled"
+              "fac_test_signal_mon" = "disabled"
+              "term_lb" = "disabled"
+              "term_lb_duration" = 0
+              "term_test_signal_gen" = tostring(null)
+            }
+            "fec_mode" = "disabled"
+            "lifecycle_state" = tostring(null)
+            "name" = "missing"
+          }
+        },
+        {
+          "col_id" = 2
+          "config" = null /* object */
+          "href" = "/ndus/6dd9fe58-45cc-4d5e-5f8c-26adb44b53fc/ethernets/2"
+          "id" = "12373168-a37c-4d98-8dca-65fa257c8dc7"
+          "module_id" = "6dd9fe58-45cc-4d5e-5f8c-26adb44b53fc"
+          "state" = {
+            "client_if_aid" = "NDU-E2"
+            "diagnostics" = {
+              "fac_lb" = "disabled"
+              "fac_lb_duration" = 0
+              "fac_test_signal_gen" = "disabled"
+              "fac_test_signal_mon" = "disabled"
+              "term_lb" = "disabled"
+              "term_lb_duration" = 0
+              "term_test_signal_gen" = tostring(null)
+            }
+            "fec_mode" = "disabled"
+            "lifecycle_state" = tostring(null)
+            "name" = "missing"
+          }
+        },
+      ])
+      "fan_unit" = {
+        "href" = "/ndus/6dd9fe58-45cc-4d5e-5f8c-26adb44b53fc/fanUnit"
+        "id" = "9efeda5e-c70b-4075-83c1-30d6a69e5fd9"
+        "ndu_id" = "6dd9fe58-45cc-4d5e-5f8c-26adb44b53fc"
+        "state" = {
+          "fan_aid" = "NDU-FAN1"
+          "fans" = tolist([
+            {
+              "speed" = 10000
+              "state" = "active"
+            },
+            {
+              "speed" = 10000
+              "state" = "active"
+            },
+            {
+              "speed" = 10000
+              "state" = "active"
+            },
+          ])
+          "inventory" = {
+            "actual_subtype" = "CFP2-DCO-400G"
+            "actual_type" = "CFP2-DCO"
+            "clei" = "abc0000001"
+            "hardware_version" = "1234"
+            "manufacture_date" = "08-03-2022"
+            "part_number" = "1234567890"
+            "serial_number" = "1234567890"
+            "vendor" = "Infinera"
+          }
+          "state" = "active"
+        }
+      }
+      "href" = "/ndus/6dd9fe58-45cc-4d5e-5f8c-26adb44b53fc"
+      "id" = "6dd9fe58-45cc-4d5e-5f8c-26adb44b53fc"
+      "lcs" = tolist(null) /* of object */
+      "leds" = {
+        "href" = "/ndus/6dd9fe58-45cc-4d5e-5f8c-26adb44b53fc/leds"
+        "id" = "79afeace-8b7b-4062-ab88-1c652e29998b"
+        "ndu_id" = "6dd9fe58-45cc-4d5e-5f8c-26adb44b53fc"
+        "state" = {
+          "led_states" = tolist(null) /* of object */
+          "leds_aid" = "NDU-LED"
+        }
+      }
+      "otus" = tolist(null) /* of object */
+      "pem" = {
+        "href" = "/ndus/6dd9fe58-45cc-4d5e-5f8c-26adb44b53fc/pem"
+        "id" = "8974ae3d-c885-4498-8353-0c07bb5469f8"
+        "ndu_id" = "6dd9fe58-45cc-4d5e-5f8c-26adb44b53fc"
+        "state" = {
+          "feed_status" = tostring(null)
+          "pem_aid" = "NDU-PEM1"
+        }
+      }
+      "ports" = tolist([
+        {
+          "config" = null /* object */
+          "edfas" = tolist([])
+          "href" = "/ndus/6dd9fe58-45cc-4d5e-5f8c-26adb44b53fc/ports/1"
+          "id" = "32e57242-e984-4389-a50c-4a28efd7f175"
+          "line_ptps" = tolist([])
+          "ndu_id" = "6dd9fe58-45cc-4d5e-5f8c-26adb44b53fc"
+          "pol_ptps" = tolist(null) /* of object */
+          "state" = {
+            "connected_to" = ""
+            "lifecycle_state" = tostring(null)
+            "name" = "missing"
+            "port_aid" = "NDU-p1"
+            "port_type" = "line"
+            "support_types" = tolist(null) /* of string */
+          }
+          "toms" = tolist([
+            {
+              "col_id" = 1
+              "config" = null /* object */
+              "href" = "/ndus/6dd9fe58-45cc-4d5e-5f8c-26adb44b53fc/ports/1/tom/1"
+              "id" = "ab077e66-e427-4d96-91f3-f0c01e3dc941"
+              "ndu_id" = "6dd9fe58-45cc-4d5e-5f8c-26adb44b53fc"
+              "port_col_id" = 1
+              "state" = {
+                "inventory" = {
+                  "actual_subtype" = "TOM-100G-Q"
+                  "actual_type" = "QSFP28"
+                  "clei" = "abc0000001"
+                  "hardware_version" = "1234"
+                  "manufacture_date" = "08-03-2022"
+                  "part_number" = "1234567890"
+                  "serial_number" = "1234567890"
+                  "vendor" = "Infinera"
+                }
+                "lifecycle_state" = tostring(null)
+                "name" = "missing"
+                "phy_mode" = "100GE"
+                "required_sub_type" = "TOM-100G-Q"
+                "required_type" = "QSFP28"
+                "supported_phy_modes" = tolist([
+                  "4x25GE",
+                  "OTU4",
+                  "100GE",
+                ])
+                "tom_aid" = "NDU-p1-TOM-1"
+                "vendor_compliance_code" = 0
+              }
+            },
+          ])
+          "trib_ptps" = tolist([
+            {
+              "col_id" = 1
+              "config" = null /* object */
+              "href" = "/ndus/6dd9fe58-45cc-4d5e-5f8c-26adb44b53fc/ports/1/tribPtps/1"
+              "id" = "2d2a38c1-d7d2-4212-8352-f41df04e014e"
+              "ndu_id" = "6dd9fe58-45cc-4d5e-5f8c-26adb44b53fc"
+              "port_col_id" = 1
+              "state" = {
+                "lifecycle_state" = tostring(null)
+                "name" = "missing"
+                "trib_ptp_aid" = "NDU-p1-TRIB-1"
+                "tx_laser_enable" = false
+              }
+            },
+          ])
+          "voas" = tolist([])
+          "xrs" = tolist([])
+        },
+        {
+          "config" = null /* object */
+          "edfas" = tolist([])
+          "href" = "/ndus/6dd9fe58-45cc-4d5e-5f8c-26adb44b53fc/ports/2"
+          "id" = "13639631-b43f-44e2-a4b5-f0a5587dd57d"
+          "line_ptps" = tolist([
+            {
+              "carriers" = tolist([
+                {
+                  "col_id" = 1
+                  "config" = null /* object */
+                  "href" = "/ndus/6dd9fe58-45cc-4d5e-5f8c-26adb44b53fc/ports/2/linePtps/1/carrier/1"
+                  "id" = "d8319441-0b9e-4c5f-892f-7c12cbadded0"
+                  "line_ptp_col_id" = 1
+                  "ndu_id" = "6dd9fe58-45cc-4d5e-5f8c-26adb44b53fc"
+                  "port_col_id" = 2
+                  "state" = {
+                    "carrier_aid" = "NDU-p2-L1-C1"
+                    "diagnostics" = {
+                      "fac_prbs_gen" = false
+                      "fac_prbs_mon" = false
+                      "term_lb" = "disabled"
+                      "term_lb_duration" = 0
+                    }
+                    "frequency" = 191337500
+                    "lifecycle_state" = tostring(null)
+                    "modulation" = "QPSK"
+                    "name" = "missing"
+                    "operating_frequency" = 191337500
+                    "tx_clp_target" = 0
+                  }
+                },
+              ])
+              "col_id" = 1
+              "config" = null /* object */
+              "href" = "/ndus/6dd9fe58-45cc-4d5e-5f8c-26adb44b53fc/ports/2/linePtps/1"
+              "id" = "bf722c63-e184-43df-8a25-6087f1e05405"
+              "ndu_id" = "6dd9fe58-45cc-4d5e-5f8c-26adb44b53fc"
+              "port_col_id" = 2
+              "state" = {
+                "current_role" = "unknown"
+                "lifecycle_state" = tostring(null)
+                "line_ptp_aid" = "NDU-p2-L1"
+                "name" = "missing"
+                "tx_laser_enable" = false
+              }
+            },
+          ])
+          "ndu_id" = "6dd9fe58-45cc-4d5e-5f8c-26adb44b53fc"
+          "pol_ptps" = tolist(null) /* of object */
+          "state" = {
+            "connected_to" = ""
+            "lifecycle_state" = tostring(null)
+            "name" = "missing"
+            "port_aid" = "NDU-p2"
+            "port_type" = "line"
+            "support_types" = tolist(null) /* of string */
+          }
+          "toms" = tolist([])
+          "trib_ptps" = tolist([])
+          "voas" = tolist([])
+          "xrs" = tolist([
+            {
+              "col_id" = 1
+              "config" = null /* object */
+              "href" = "/ndus/6dd9fe58-45cc-4d5e-5f8c-26adb44b53fc/ports/2/xr/1"
+              "id" = "b5361953-52cb-4e6b-97d0-e6d795ca9ebe"
+              "ndu_id" = "6dd9fe58-45cc-4d5e-5f8c-26adb44b53fc"
+              "port_col_id" = 2
+              "state" = {
+                "factory_reset_action" = false
+                "inventory" = {
+                  "actual_subtype" = "CFP2-DCO-400G"
+                  "actual_type" = "CFP2-DCO"
+                  "clei" = "abc0000001"
+                  "hardware_version" = "1234"
+                  "manufacture_date" = "08-03-2022"
+                  "part_number" = "1234567890"
+                  "serial_number" = "AAAA0002"
+                  "vendor" = "Infinera"
+                }
+                "lifecycle_state" = tostring(null)
+                "module" = {
+                  "connectivity_state" = "active"
+                  "module_id" = "7efd5bd5-1c65-4e8b-54d8-a7000d130b28"
+                  "module_name" = "A-LRN-Leaf2-KS"
+                }
+                "name" = "missing"
+                "required_sub_type" = "CFP2-DCO-400G"
+                "required_type" = "CFP2-DCO"
+                "restart_action" = "none"
+                "xr_aid" = "NDU-p2-XR"
+              }
+            },
+          ])
+        },
+        {
+          "config" = null /* object */
+          "edfas" = tolist([])
+          "href" = "/ndus/6dd9fe58-45cc-4d5e-5f8c-26adb44b53fc/ports/3"
+          "id" = "2d9236c8-92bb-4ad9-86d0-40964ecfb440"
+          "line_ptps" = tolist([])
+          "ndu_id" = "6dd9fe58-45cc-4d5e-5f8c-26adb44b53fc"
+          "pol_ptps" = tolist(null) /* of object */
+          "state" = {
+            "connected_to" = ""
+            "lifecycle_state" = tostring(null)
+            "name" = "missing"
+            "port_aid" = "NDU-p3"
+            "port_type" = "line"
+            "support_types" = tolist(null) /* of string */
+          }
+          "toms" = tolist([
+            {
+              "col_id" = 1
+              "config" = null /* object */
+              "href" = "/ndus/6dd9fe58-45cc-4d5e-5f8c-26adb44b53fc/ports/3/tom/1"
+              "id" = "1d5499dd-3f02-4821-972d-e11c9d9bc432"
+              "ndu_id" = "6dd9fe58-45cc-4d5e-5f8c-26adb44b53fc"
+              "port_col_id" = 3
+              "state" = {
+                "inventory" = {
+                  "actual_subtype" = "TOM-100G-Q"
+                  "actual_type" = "QSFP28"
+                  "clei" = "abc0000001"
+                  "hardware_version" = "1234"
+                  "manufacture_date" = "08-03-2022"
+                  "part_number" = "1234567890"
+                  "serial_number" = "1234567890"
+                  "vendor" = "Infinera"
+                }
+                "lifecycle_state" = tostring(null)
+                "name" = "missing"
+                "phy_mode" = "100GE"
+                "required_sub_type" = "TOM-100G-Q"
+                "required_type" = "QSFP28"
+                "supported_phy_modes" = tolist([
+                  "4x25GE",
+                  "OTU4",
+                  "100GE",
+                ])
+                "tom_aid" = "NDU-p3-TOM-1"
+                "vendor_compliance_code" = 0
+              }
+            },
+          ])
+          "trib_ptps" = tolist([
+            {
+              "col_id" = 2
+              "config" = null /* object */
+              "href" = "/ndus/6dd9fe58-45cc-4d5e-5f8c-26adb44b53fc/ports/3/tribPtps/2"
+              "id" = "7402003a-cfd8-476d-947f-fcadef5be2e8"
+              "ndu_id" = "6dd9fe58-45cc-4d5e-5f8c-26adb44b53fc"
+              "port_col_id" = 3
+              "state" = {
+                "lifecycle_state" = tostring(null)
+                "name" = "missing"
+                "trib_ptp_aid" = "NDU-p3-TRIB-1"
+                "tx_laser_enable" = false
+              }
+            },
+          ])
+          "voas" = tolist([])
+          "xrs" = tolist([])
+        },
+        {
+          "config" = null /* object */
+          "edfas" = tolist([
+            {
+              "col_id" = 1
+              "config" = null /* object */
+              "href" = "/ndus/6dd9fe58-45cc-4d5e-5f8c-26adb44b53fc/ports/4/edfa/1"
+              "id" = "c3f363fb-ecf5-4734-9f42-be5515dd19de"
+              "ndu_id" = "6dd9fe58-45cc-4d5e-5f8c-26adb44b53fc"
+              "port_col_id" = 4
+              "state" = {
+                "amplifier_enable" = false
+                "current_gain" = 0
+                "edfa_aid" = "NDU-p4-edfa"
+                "gain_target" = 0
+                "inventory" = {
+                  "actual_subtype" = "QSFP28EDFA"
+                  "actual_type" = "QSFP28"
+                  "clei" = "abc0000001"
+                  "hardware_version" = "1234"
+                  "manufacture_date" = "08-03-2022"
+                  "part_number" = "1234567890"
+                  "serial_number" = "1234567890"
+                  "vendor" = "Infinera"
+                }
+                "lifecycle_state" = tostring(null)
+                "name" = "missing"
+                "required_sub_type" = "QSFP28EDFA"
+                "required_type" = "QSFP28"
+                "supported_max_gain" = 0
+                "supported_min_gain" = 0
+              }
+            },
+          ])
+          "href" = "/ndus/6dd9fe58-45cc-4d5e-5f8c-26adb44b53fc/ports/4"
+          "id" = "422fe871-d480-47b7-bd4f-3023735ddae9"
+          "line_ptps" = tolist([])
+          "ndu_id" = "6dd9fe58-45cc-4d5e-5f8c-26adb44b53fc"
+          "pol_ptps" = tolist(null) /* of object */
+          "state" = {
+            "connected_to" = ""
+            "lifecycle_state" = tostring(null)
+            "name" = "missing"
+            "port_aid" = "NDU-p4"
+            "port_type" = "line"
+            "support_types" = tolist(null) /* of string */
+          }
+          "toms" = tolist([])
+          "trib_ptps" = tolist([])
+          "voas" = tolist([])
+          "xrs" = tolist([])
+        },
+        {
+          "config" = null /* object */
+          "edfas" = tolist([])
+          "href" = "/ndus/6dd9fe58-45cc-4d5e-5f8c-26adb44b53fc/ports/5"
+          "id" = "68b4b3ef-f183-4ed2-ac6a-bb67b0c91456"
+          "line_ptps" = tolist([])
+          "ndu_id" = "6dd9fe58-45cc-4d5e-5f8c-26adb44b53fc"
+          "pol_ptps" = tolist(null) /* of object */
+          "state" = {
+            "connected_to" = ""
+            "lifecycle_state" = tostring(null)
+            "name" = "missing"
+            "port_aid" = "NDU-p5"
+            "port_type" = "line"
+            "support_types" = tolist(null) /* of string */
+          }
+          "toms" = tolist([])
+          "trib_ptps" = tolist([])
+          "voas" = tolist([
+            {
+              "col_id" = 1
+              "config" = null /* object */
+              "href" = "/ndus/6dd9fe58-45cc-4d5e-5f8c-26adb44b53fc/ports/5/voa/1"
+              "id" = "ac032377-5c59-4292-8469-3fef77e16bd5"
+              "ndu_id" = "6dd9fe58-45cc-4d5e-5f8c-26adb44b53fc"
+              "port_col_id" = 5
+              "state" = {
+                "inventory" = {
+                  "actual_subtype" = "QSFP28VOA"
+                  "actual_type" = "QSFP28"
+                  "clei" = "abc0000001"
+                  "hardware_version" = "1234"
+                  "manufacture_date" = "08-03-2022"
+                  "part_number" = "1234567890"
+                  "serial_number" = "1234567890"
+                  "vendor" = "Infinera"
+                }
+                "lifecycle_state" = tostring(null)
+                "name" = "missing"
+                "required_sub_type" = "QSFP28VOA"
+                "required_type" = "QSFP28"
+                "supported_max_attenuation" = 0
+                "supported_min_attenuation" = 0
+                "voa_aid" = "NDU-p5-voa"
+                "voa_attenuation_tx" = 0
+                "voa_shutter_tx" = false
+              }
+            },
+          ])
+          "xrs" = tolist([])
+        },
+        {
+          "config" = null /* object */
+          "edfas" = tolist([])
+          "href" = "/ndus/6dd9fe58-45cc-4d5e-5f8c-26adb44b53fc/ports/6"
+          "id" = "9cec0851-4918-4794-960a-597319534d09"
+          "line_ptps" = tolist([])
+          "ndu_id" = "6dd9fe58-45cc-4d5e-5f8c-26adb44b53fc"
+          "pol_ptps" = tolist(null) /* of object */
+          "state" = {
+            "connected_to" = ""
+            "lifecycle_state" = tostring(null)
+            "name" = "missing"
+            "port_aid" = "NDU-p6"
+            "port_type" = "line"
+            "support_types" = tolist(null) /* of string */
+          }
+          "toms" = tolist([])
+          "trib_ptps" = tolist([])
+          "voas" = tolist([])
+          "xrs" = tolist([])
+        },
+        {
+          "config" = null /* object */
+          "edfas" = tolist([])
+          "href" = "/ndus/6dd9fe58-45cc-4d5e-5f8c-26adb44b53fc/ports/7"
+          "id" = "011206eb-99ac-4577-8e7a-3a558d6e4d09"
+          "line_ptps" = tolist([])
+          "ndu_id" = "6dd9fe58-45cc-4d5e-5f8c-26adb44b53fc"
+          "pol_ptps" = tolist(null) /* of object */
+          "state" = {
+            "connected_to" = ""
+            "lifecycle_state" = tostring(null)
+            "name" = "missing"
+            "port_aid" = "NDU-p7"
+            "port_type" = "line"
+            "support_types" = tolist(null) /* of string */
+          }
+          "toms" = tolist([])
+          "trib_ptps" = tolist([])
+          "voas" = tolist([])
+          "xrs" = tolist([])
+        },
+      ])
+      "state" = {
+        "connectivity_state" = "active"
+        "contact" = "contact"
+        "factory_reset_action" = false
+        "hw_description" = {
+          "clei" = "1234567890"
+          "dmn" = tolist([
+            {
+              "language" = "en"
+              "value" = "Infinera"
+            },
+          ])
+          "icv" = "ocf.2.2.5"
+          "mac_address" = "2E:3B:4B:FC:6F:85"
+          "mndt" = "2021-03-25"
+          "mnfv" = "1.0.0"
+          "mnhw" = "01"
+          "mnmn" = "Infinera Corporation"
+          "mnmo" = "100"
+          "pi" = "0526bdef-e085-4693-7183-e03660e29aa0"
+          "piid" = "f87fee09-0ef8-4dea-9a34-1900c8669590"
+          "serial_number" = "100000001"
+          "sv" = "Beta 1.0"
+        }
+        "labels" = tomap(null) /* of string */
+        "lifecycle_state" = tostring(null)
+        "location" = {
+          "altitude" = 0
+          "clli" = "clli"
+          "description" = ""
+          "longitude" = 0
+        }
+        "managed_by" = "CM"
+        "name" = "NDU-Kissimmee"
+        "ndu_aid" = "NDU"
+        "pol_power_ctrl_mode" = "manual"
+        "restart_action" = "none"
+      }
+    },
+  ])
+}

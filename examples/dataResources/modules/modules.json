@@ -1,0 +1,891 @@
+modules = {
+  "id" = tostring(null)
+  "modules" = tolist([
+    {
+      "config" = {
+        "labels" = tomap(null) /* of string */
+        "module_name" = "A-LRN-Hub-Orlando"
+      }
+      "ethernet_clients" = tolist([
+        {
+          "acs" = tolist([])
+          "col_id" = 1
+          "config" = {
+            "diagnostics" = {
+              "fac_prbs_gen" = tobool(null)
+              "fac_prbs_mon" = tobool(null)
+              "term_lb" = "disabled"
+              "term_lb_duration" = 0
+              "term_prbs_gen" = tobool(null)
+            }
+            "fec_mode" = "enabled"
+            "lldp" = {
+              "admin_status" = "rxOnly"
+              "gcc_fwd" = false
+              "host_rx_drop" = false
+              "ttl_usage" = true
+            }
+          }
+          "href" = "/modules/dfe82597-ba8c-4263-42a0-008e02a2c6a9/ethernetClients/1"
+          "id" = "b24c779a-5a35-4f90-ba47-56164a6eb49c"
+          "module_id" = "modules"
+          "state" = {
+            "client_if_aid" = "XR-T1"
+            "client_if_port_speed" = 100
+            "diagnostics" = {
+              "fac_lb" = tostring(null)
+              "fac_lb_duration" = tonumber(null)
+              "fac_prbs_gen" = tobool(null)
+              "fac_prbs_mon" = tobool(null)
+              "term_lb" = "disabled"
+              "term_lb_duration" = 0
+              "term_prbs_gen" = tobool(null)
+            }
+            "fec_mode" = "enabled"
+            "fec_type" = "KP4"
+            "life_cycle_state" = tostring(null)
+            "lldp" = {
+              "admin_status" = "rxOnly"
+              "clr_stats" = false
+              "flush_host_db" = false
+              "gcc_fwd" = false
+              "host_rx_drop" = false
+              "lldp_config_aid" = "XR-T1-LLDP1"
+              "neighbors" = tolist([
+                {
+                  "chassis_id" = "16:2F:FF:00:00:00"
+                  "chassis_id_subtype" = "macAddress"
+                  "host_neighbor_aid" = "XR-T1-HN1"
+                  "port_descr" = "et-1/0/0:0"
+                  "port_id" = tostring(null)
+                  "port_id_subtype" = "interfaceName"
+                  "port_source_mac" = "58:00:BB:00:00:10"
+                  "sys_descr" = "Hub Router"
+                  "sys_name" = "Oralando"
+                  "sys_ttl" = 5
+                },
+              ])
+              "too_many_neighbors" = false
+              "ttl_usage" = true
+            }
+          }
+        },
+        {
+          "acs" = tolist([])
+          "col_id" = 2
+          "config" = {
+            "diagnostics" = {
+              "fac_prbs_gen" = tobool(null)
+              "fac_prbs_mon" = tobool(null)
+              "term_lb" = "disabled"
+              "term_lb_duration" = 0
+              "term_prbs_gen" = tobool(null)
+            }
+            "fec_mode" = "enabled"
+            "lldp" = {
+              "admin_status" = "rxOnly"
+              "gcc_fwd" = false
+              "host_rx_drop" = false
+              "ttl_usage" = true
+            }
+          }
+          "href" = "/modules/dfe82597-ba8c-4263-42a0-008e02a2c6a9/ethernetClients/2"
+          "id" = "820622e7-8274-4665-adf1-7114b136265d"
+          "module_id" = "modules"
+          "state" = {
+            "client_if_aid" = "XR-T2"
+            "client_if_port_speed" = 100
+            "diagnostics" = {
+              "fac_lb" = tostring(null)
+              "fac_lb_duration" = tonumber(null)
+              "fac_prbs_gen" = tobool(null)
+              "fac_prbs_mon" = tobool(null)
+              "term_lb" = "disabled"
+              "term_lb_duration" = 0
+              "term_prbs_gen" = tobool(null)
+            }
+            "fec_mode" = "enabled"
+            "fec_type" = "KP4"
+            "life_cycle_state" = tostring(null)
+            "lldp" = {
+              "admin_status" = "rxOnly"
+              "clr_stats" = false
+              "flush_host_db" = false
+              "gcc_fwd" = false
+              "host_rx_drop" = false
+              "lldp_config_aid" = "XR-T2-LLDP1"
+              "neighbors" = tolist([
+                {
+                  "chassis_id" = "16:2F:FF:00:00:00"
+                  "chassis_id_subtype" = "macAddress"
+                  "host_neighbor_aid" = "XR-T2-HN1"
+                  "port_descr" = "et-1/0/0:1"
+                  "port_id" = tostring(null)
+                  "port_id_subtype" = "interfaceName"
+                  "port_source_mac" = "58:00:BB:00:00:11"
+                  "sys_descr" = "Hub Router"
+                  "sys_name" = "Oralando"
+                  "sys_ttl" = 5
+                },
+              ])
+              "too_many_neighbors" = false
+              "ttl_usage" = true
+            }
+          }
+        },
+        {
+          "acs" = tolist([])
+          "col_id" = 3
+          "config" = {
+            "diagnostics" = {
+              "fac_prbs_gen" = tobool(null)
+              "fac_prbs_mon" = tobool(null)
+              "term_lb" = "disabled"
+              "term_lb_duration" = 0
+              "term_prbs_gen" = tobool(null)
+            }
+            "fec_mode" = "enabled"
+            "lldp" = {
+              "admin_status" = "rxOnly"
+              "gcc_fwd" = false
+              "host_rx_drop" = false
+              "ttl_usage" = true
+            }
+          }
+          "href" = "/modules/dfe82597-ba8c-4263-42a0-008e02a2c6a9/ethernetClients/3"
+          "id" = "81affef3-8b87-479d-9e22-6c1660466616"
+          "module_id" = "modules"
+          "state" = {
+            "client_if_aid" = "XR-T3"
+            "client_if_port_speed" = 100
+            "diagnostics" = {
+              "fac_lb" = tostring(null)
+              "fac_lb_duration" = tonumber(null)
+              "fac_prbs_gen" = tobool(null)
+              "fac_prbs_mon" = tobool(null)
+              "term_lb" = "disabled"
+              "term_lb_duration" = 0
+              "term_prbs_gen" = tobool(null)
+            }
+            "fec_mode" = "enabled"
+            "fec_type" = "KP4"
+            "life_cycle_state" = tostring(null)
+            "lldp" = {
+              "admin_status" = "rxOnly"
+              "clr_stats" = false
+              "flush_host_db" = false
+              "gcc_fwd" = false
+              "host_rx_drop" = false
+              "lldp_config_aid" = "XR-T3-LLDP1"
+              "neighbors" = tolist([
+                {
+                  "chassis_id" = "16:2F:FF:00:00:00"
+                  "chassis_id_subtype" = "macAddress"
+                  "host_neighbor_aid" = "XR-T3-HN1"
+                  "port_descr" = "et-1/0/0:2"
+                  "port_id" = tostring(null)
+                  "port_id_subtype" = "interfaceName"
+                  "port_source_mac" = "58:00:BB:00:00:12"
+                  "sys_descr" = "Hub Router"
+                  "sys_name" = "Oralando"
+                  "sys_ttl" = 5
+                },
+              ])
+              "too_many_neighbors" = false
+              "ttl_usage" = true
+            }
+          }
+        },
+        {
+          "acs" = tolist([])
+          "col_id" = 4
+          "config" = {
+            "diagnostics" = {
+              "fac_prbs_gen" = tobool(null)
+              "fac_prbs_mon" = tobool(null)
+              "term_lb" = "disabled"
+              "term_lb_duration" = 0
+              "term_prbs_gen" = tobool(null)
+            }
+            "fec_mode" = "enabled"
+            "lldp" = {
+              "admin_status" = "rxOnly"
+              "gcc_fwd" = false
+              "host_rx_drop" = false
+              "ttl_usage" = true
+            }
+          }
+          "href" = "/modules/dfe82597-ba8c-4263-42a0-008e02a2c6a9/ethernetClients/4"
+          "id" = "061799a2-51a4-44fa-a43b-747f121206c6"
+          "module_id" = "modules"
+          "state" = {
+            "client_if_aid" = "XR-T4"
+            "client_if_port_speed" = 100
+            "diagnostics" = {
+              "fac_lb" = tostring(null)
+              "fac_lb_duration" = tonumber(null)
+              "fac_prbs_gen" = tobool(null)
+              "fac_prbs_mon" = tobool(null)
+              "term_lb" = "disabled"
+              "term_lb_duration" = 0
+              "term_prbs_gen" = tobool(null)
+            }
+            "fec_mode" = "enabled"
+            "fec_type" = "KP4"
+            "life_cycle_state" = tostring(null)
+            "lldp" = {
+              "admin_status" = "rxOnly"
+              "clr_stats" = false
+              "flush_host_db" = false
+              "gcc_fwd" = false
+              "host_rx_drop" = false
+              "lldp_config_aid" = "XR-T4-LLDP1"
+              "neighbors" = tolist([
+                {
+                  "chassis_id" = "16:2F:FF:00:00:00"
+                  "chassis_id_subtype" = "macAddress"
+                  "host_neighbor_aid" = "XR-T4-HN1"
+                  "port_descr" = "et-1/0/0:3"
+                  "port_id" = tostring(null)
+                  "port_id_subtype" = "interfaceName"
+                  "port_source_mac" = "58:00:BB:00:00:13"
+                  "sys_descr" = "Hub Router"
+                  "sys_name" = "Oralando"
+                  "sys_ttl" = 5
+                },
+              ])
+              "too_many_neighbors" = false
+              "ttl_usage" = true
+            }
+          }
+        },
+      ])
+      "href" = "/modules/dfe82597-ba8c-4263-42a0-008e02a2c6a9"
+      "id" = "dfe82597-ba8c-4263-42a0-008e02a2c6a9"
+      "lcs" = tolist([
+        {
+          "col_id" = 1
+          "href" = "/modules/dfe82597-ba8c-4263-42a0-008e02a2c6a9/localConnections/1"
+          "id" = "b38eceaa-058e-4a0c-b4c6-c4d725a3786e"
+          "module_id" = "modules"
+          "state" = {
+            "client_aid" = "XR-T1"
+            "direction" = "txRx"
+            "dscg_aid" = "XRCARRIERDSCG-2"
+            "lc_aid" = "XRLC-1"
+            "lc_ctrl" = tonumber(null)
+            "line_aid" = ""
+            "remote_client_id" = ""
+            "remote_module_id" = ""
+          }
+        },
+        {
+          "col_id" = 2
+          "href" = "/modules/dfe82597-ba8c-4263-42a0-008e02a2c6a9/localConnections/2"
+          "id" = "4c245db3-10f3-450e-a4b3-be181e0bad44"
+          "module_id" = "modules"
+          "state" = {
+            "client_aid" = "XR-T2"
+            "direction" = "txRx"
+            "dscg_aid" = "XRCARRIERDSCG-3"
+            "lc_aid" = "XRLC-2"
+            "lc_ctrl" = tonumber(null)
+            "line_aid" = ""
+            "remote_client_id" = ""
+            "remote_module_id" = ""
+          }
+        },
+        {
+          "col_id" = 3
+          "href" = "/modules/dfe82597-ba8c-4263-42a0-008e02a2c6a9/localConnections/3"
+          "id" = "35b04b01-38f2-4040-a2b4-9f2129cf44ad"
+          "module_id" = "modules"
+          "state" = {
+            "client_aid" = "XR-T3"
+            "direction" = "txRx"
+            "dscg_aid" = "XRCARRIERDSCG-4"
+            "lc_aid" = "XRLC-3"
+            "lc_ctrl" = tonumber(null)
+            "line_aid" = ""
+            "remote_client_id" = ""
+            "remote_module_id" = ""
+          }
+        },
+      ])
+      "line_ptps" = tolist(null) /* of object */
+      "otus" = tolist([])
+      "state" = {
+        "config_state" = "ready"
+        "configured_role" = "auto"
+        "connectivity_state" = "inactive"
+        "current_role" = "hub"
+        "factory_reset_action" = false
+        "hid" = tostring(null)
+        "hport_id" = tostring(null)
+        "hw_description" = {
+          "capabilities" = tomap({
+            "clientCapacity" = "400G"
+            "licenseEnabledAutoLambda" = "Yes"
+            "licenseEnabledEncryption" = "Yes"
+            "licenseEnabledP2mpVti" = "Yes"
+            "licenseEnabledSFM" = "Yes"
+            "prepaidAutoLambda" = "Yes"
+            "prepaidEncryption" = "No"
+            "prepaidP2mpVti" = "Yes"
+            "prepaidSFM" = "Yes"
+            "topology" = "P2MP"
+          })
+          "clei" = "1234567890"
+          "connector_type" = "lcConnector"
+          "form_factor" = "cfp2-dco"
+          "mac_address" = "00:0B:AA:AA:00:00"
+          "mndt" = "2021-03-25"
+          "mnfv" = "1.0.0"
+          "mnhw" = "01"
+          "mnmn" = "Infinera Corporation"
+          "mnmo" = "XRQDCD400MAE2ZZZZ"
+          "pi" = "c4290f9d-3cf4-4f69-4aad-dfb39321d110"
+          "piid" = "9058cf77-195d-4363-b822-8a5b6229cc31"
+          "serial_number" = "000000AAAA"
+          "sv" = "1.00"
+        }
+        "labels" = tomap(null) /* of string */
+        "life_cycle_state" = tostring(null)
+        "module_aid" = "XR"
+        "module_name" = "A-LRN-Hub-Orlando"
+        "restart_action" = "none"
+        "role_status" = "ready"
+        "serdes_rate" = "25"
+        "tc_mode" = false
+        "topology" = "auto"
+        "traffic_mode" = "L1Mode"
+      }
+    },
+    {
+      "config" = {
+        "labels" = tomap(null) /* of string */
+        "module_name" = "A-LRN-Leaf1-BR"
+      }
+      "ethernet_clients" = tolist([
+        {
+          "acs" = tolist([])
+          "col_id" = 1
+          "config" = {
+            "diagnostics" = {
+              "fac_prbs_gen" = tobool(null)
+              "fac_prbs_mon" = tobool(null)
+              "term_lb" = "disabled"
+              "term_lb_duration" = 0
+              "term_prbs_gen" = tobool(null)
+            }
+            "fec_mode" = "enabled"
+            "lldp" = {
+              "admin_status" = "rxOnly"
+              "gcc_fwd" = false
+              "host_rx_drop" = false
+              "ttl_usage" = true
+            }
+          }
+          "href" = "/modules/7bf63f5c-a621-4b13-556c-8142ee127d49/ethernetClients/1"
+          "id" = "507fb26b-41ce-4b82-b56e-281c4d5097b4"
+          "module_id" = "modules"
+          "state" = {
+            "client_if_aid" = "XR-T1"
+            "client_if_port_speed" = 100
+            "diagnostics" = {
+              "fac_lb" = tostring(null)
+              "fac_lb_duration" = tonumber(null)
+              "fac_prbs_gen" = tobool(null)
+              "fac_prbs_mon" = tobool(null)
+              "term_lb" = "disabled"
+              "term_lb_duration" = 0
+              "term_prbs_gen" = tobool(null)
+            }
+            "fec_mode" = "enabled"
+            "fec_type" = "KP4"
+            "life_cycle_state" = tostring(null)
+            "lldp" = {
+              "admin_status" = "rxOnly"
+              "clr_stats" = false
+              "flush_host_db" = false
+              "gcc_fwd" = false
+              "host_rx_drop" = false
+              "lldp_config_aid" = "XR-T1-LLDP1"
+              "neighbors" = tolist([
+                {
+                  "chassis_id" = "16:34:FF:00:00:00"
+                  "chassis_id_subtype" = "macAddress"
+                  "host_neighbor_aid" = "XR-T1-HN1"
+                  "port_descr" = "et-0/0/0:0"
+                  "port_id" = tostring(null)
+                  "port_id_subtype" = "interfaceName"
+                  "port_source_mac" = "58:00:BB:00:01:10"
+                  "sys_descr" = "BR Leaf Router"
+                  "sys_name" = "Boca Raton"
+                  "sys_ttl" = 5
+                },
+              ])
+              "too_many_neighbors" = false
+              "ttl_usage" = true
+            }
+          }
+        },
+      ])
+      "href" = "/modules/7bf63f5c-a621-4b13-556c-8142ee127d49"
+      "id" = "7bf63f5c-a621-4b13-556c-8142ee127d49"
+      "lcs" = tolist([
+        {
+          "col_id" = 1
+          "href" = "/modules/7bf63f5c-a621-4b13-556c-8142ee127d49/localConnections/1"
+          "id" = "818f0692-2c1a-450c-aae7-e90b38d1b50a"
+          "module_id" = "modules"
+          "state" = {
+            "client_aid" = "XR-T1"
+            "direction" = "txRx"
+            "dscg_aid" = "XRCARRIERDSCG-2"
+            "lc_aid" = "XRLC-1"
+            "lc_ctrl" = tonumber(null)
+            "line_aid" = ""
+            "remote_client_id" = ""
+            "remote_module_id" = ""
+          }
+        },
+      ])
+      "line_ptps" = tolist(null) /* of object */
+      "otus" = tolist([])
+      "state" = {
+        "config_state" = "ready"
+        "configured_role" = "auto"
+        "connectivity_state" = "inactive"
+        "current_role" = "leaf"
+        "factory_reset_action" = false
+        "hid" = tostring(null)
+        "hport_id" = tostring(null)
+        "hw_description" = {
+          "capabilities" = tomap({
+            "clientCapacity" = "400G"
+            "licenseEnabledAutoLambda" = "Yes"
+            "licenseEnabledEncryption" = "Yes"
+            "licenseEnabledP2mpVti" = "Yes"
+            "licenseEnabledSFM" = "Yes"
+            "prepaidAutoLambda" = "Yes"
+            "prepaidEncryption" = "No"
+            "prepaidP2mpVti" = "Yes"
+            "prepaidSFM" = "Yes"
+            "topology" = "P2MP"
+          })
+          "clei" = "1234567890"
+          "connector_type" = "lcConnector"
+          "form_factor" = "qsfp-dd"
+          "mac_address" = "00:0B:AA:AA:00:01"
+          "mndt" = "2021-03-25"
+          "mnfv" = "1.0.0"
+          "mnhw" = "01"
+          "mnmn" = "Infinera Corporation"
+          "mnmo" = "XRQDCD100MAE2ZZZZ"
+          "pi" = "ea1fb0fa-f97b-4861-66af-8ddcb4d115c6"
+          "piid" = "abb81108-8bbf-4222-9bf3-0a6bbb75ac65"
+          "serial_number" = "AAAA0000"
+          "sv" = "1.00"
+        }
+        "labels" = tomap(null) /* of string */
+        "life_cycle_state" = tostring(null)
+        "module_aid" = "XR"
+        "module_name" = "A-LRN-Leaf1-BR"
+        "restart_action" = "none"
+        "role_status" = "ready"
+        "serdes_rate" = "25"
+        "tc_mode" = false
+        "topology" = "auto"
+        "traffic_mode" = "L1Mode"
+      }
+    },
+    {
+      "config" = {
+        "labels" = tomap(null) /* of string */
+        "module_name" = "A-LRN-Leaf2-KS"
+      }
+      "ethernet_clients" = tolist([
+        {
+          "acs" = tolist([])
+          "col_id" = 1
+          "config" = {
+            "diagnostics" = {
+              "fac_prbs_gen" = tobool(null)
+              "fac_prbs_mon" = tobool(null)
+              "term_lb" = "disabled"
+              "term_lb_duration" = 0
+              "term_prbs_gen" = tobool(null)
+            }
+            "fec_mode" = "enabled"
+            "lldp" = {
+              "admin_status" = "rxOnly"
+              "gcc_fwd" = false
+              "host_rx_drop" = false
+              "ttl_usage" = true
+            }
+          }
+          "href" = "/modules/ea8a4bef-a9b4-4aa2-5dbb-1900e526dec0/ethernetClients/1"
+          "id" = "00291c33-b4f9-4609-b264-256cb2f9b308"
+          "module_id" = "modules"
+          "state" = {
+            "client_if_aid" = "XR-T1"
+            "client_if_port_speed" = 100
+            "diagnostics" = {
+              "fac_lb" = tostring(null)
+              "fac_lb_duration" = tonumber(null)
+              "fac_prbs_gen" = tobool(null)
+              "fac_prbs_mon" = tobool(null)
+              "term_lb" = "disabled"
+              "term_lb_duration" = 0
+              "term_prbs_gen" = tobool(null)
+            }
+            "fec_mode" = "enabled"
+            "fec_type" = "KP4"
+            "life_cycle_state" = tostring(null)
+            "lldp" = {
+              "admin_status" = "rxOnly"
+              "clr_stats" = false
+              "flush_host_db" = false
+              "gcc_fwd" = false
+              "host_rx_drop" = false
+              "lldp_config_aid" = "XR-T1-LLDP1"
+              "neighbors" = tolist([
+                {
+                  "chassis_id" = "16:36:FF:00:00:00"
+                  "chassis_id_subtype" = "macAddress"
+                  "host_neighbor_aid" = "XR-T1-HN1"
+                  "port_descr" = "et-0/0/0:0"
+                  "port_id" = tostring(null)
+                  "port_id_subtype" = "interfaceName"
+                  "port_source_mac" = "58:00:BB:00:02:10"
+                  "sys_descr" = "KS Leaf Router"
+                  "sys_name" = "Kissimmee"
+                  "sys_ttl" = 5
+                },
+              ])
+              "too_many_neighbors" = false
+              "ttl_usage" = true
+            }
+          }
+        },
+      ])
+      "href" = "/modules/ea8a4bef-a9b4-4aa2-5dbb-1900e526dec0"
+      "id" = "ea8a4bef-a9b4-4aa2-5dbb-1900e526dec0"
+      "lcs" = tolist([
+        {
+          "col_id" = 1
+          "href" = "/modules/ea8a4bef-a9b4-4aa2-5dbb-1900e526dec0/localConnections/1"
+          "id" = "b87c51d1-2985-4429-a54e-5556bd5b78b8"
+          "module_id" = "modules"
+          "state" = {
+            "client_aid" = "XR-T1"
+            "direction" = "txRx"
+            "dscg_aid" = "XRCARRIERDSCG-1"
+            "lc_aid" = "XRLC-1"
+            "lc_ctrl" = tonumber(null)
+            "line_aid" = ""
+            "remote_client_id" = ""
+            "remote_module_id" = ""
+          }
+        },
+      ])
+      "line_ptps" = tolist(null) /* of object */
+      "otus" = tolist([])
+      "state" = {
+        "config_state" = "ready"
+        "configured_role" = "auto"
+        "connectivity_state" = "inactive"
+        "current_role" = "leaf"
+        "factory_reset_action" = false
+        "hid" = tostring(null)
+        "hport_id" = tostring(null)
+        "hw_description" = {
+          "capabilities" = tomap({
+            "clientCapacity" = "400G"
+            "licenseEnabledAutoLambda" = "Yes"
+            "licenseEnabledEncryption" = "Yes"
+            "licenseEnabledP2mpVti" = "Yes"
+            "licenseEnabledSFM" = "Yes"
+            "prepaidAutoLambda" = "Yes"
+            "prepaidEncryption" = "No"
+            "prepaidP2mpVti" = "Yes"
+            "prepaidSFM" = "Yes"
+            "topology" = "P2MP"
+          })
+          "clei" = "1234567890"
+          "connector_type" = "lcConnector"
+          "form_factor" = "qsfp-dd"
+          "mac_address" = "00:0B:AA:AA:00:02"
+          "mndt" = "2021-03-25"
+          "mnfv" = "1.0.0"
+          "mnhw" = "01"
+          "mnmn" = "Infinera Corporation"
+          "mnmo" = "XRQDCD100MAE2ZZZZ"
+          "pi" = "bae4f33c-09c5-41b1-5424-f8f344d19d35"
+          "piid" = "b3a4a1f7-b8b6-4545-af7d-61e89a1279fb"
+          "serial_number" = "AAAA0002"
+          "sv" = "1.00"
+        }
+        "labels" = tomap(null) /* of string */
+        "life_cycle_state" = tostring(null)
+        "module_aid" = "XR"
+        "module_name" = "A-LRN-Leaf2-KS"
+        "restart_action" = "none"
+        "role_status" = "ready"
+        "serdes_rate" = "25"
+        "tc_mode" = false
+        "topology" = "auto"
+        "traffic_mode" = "L1Mode"
+      }
+    },
+    {
+      "config" = {
+        "labels" = tomap(null) /* of string */
+        "module_name" = "A-LRN-Leaf3-FL"
+      }
+      "ethernet_clients" = tolist([
+        {
+          "acs" = tolist([])
+          "col_id" = 1
+          "config" = {
+            "diagnostics" = {
+              "fac_prbs_gen" = tobool(null)
+              "fac_prbs_mon" = tobool(null)
+              "term_lb" = "disabled"
+              "term_lb_duration" = 0
+              "term_prbs_gen" = tobool(null)
+            }
+            "fec_mode" = "enabled"
+            "lldp" = {
+              "admin_status" = "rxOnly"
+              "gcc_fwd" = false
+              "host_rx_drop" = false
+              "ttl_usage" = true
+            }
+          }
+          "href" = "/modules/492a6337-1871-44bc-436d-cc9e6ff619be/ethernetClients/1"
+          "id" = "6a0a4474-a2e0-4791-bfc4-1de4017bc7ce"
+          "module_id" = "modules"
+          "state" = {
+            "client_if_aid" = "XR-T1"
+            "client_if_port_speed" = 100
+            "diagnostics" = {
+              "fac_lb" = tostring(null)
+              "fac_lb_duration" = tonumber(null)
+              "fac_prbs_gen" = tobool(null)
+              "fac_prbs_mon" = tobool(null)
+              "term_lb" = "disabled"
+              "term_lb_duration" = 0
+              "term_prbs_gen" = tobool(null)
+            }
+            "fec_mode" = "enabled"
+            "fec_type" = "KP4"
+            "life_cycle_state" = tostring(null)
+            "lldp" = {
+              "admin_status" = "rxOnly"
+              "clr_stats" = false
+              "flush_host_db" = false
+              "gcc_fwd" = false
+              "host_rx_drop" = false
+              "lldp_config_aid" = "XR-T1-LLDP1"
+              "neighbors" = tolist([
+                {
+                  "chassis_id" = "16:38:FF:00:00:00"
+                  "chassis_id_subtype" = "macAddress"
+                  "host_neighbor_aid" = "XR-T1-HN1"
+                  "port_descr" = "et-0/0/0:0"
+                  "port_id" = tostring(null)
+                  "port_id_subtype" = "interfaceName"
+                  "port_source_mac" = "58:00:BB:00:03:10"
+                  "sys_descr" = "FL Leaf Router"
+                  "sys_name" = "Fort Lauderdale"
+                  "sys_ttl" = 5
+                },
+              ])
+              "too_many_neighbors" = false
+              "ttl_usage" = true
+            }
+          }
+        },
+      ])
+      "href" = "/modules/492a6337-1871-44bc-436d-cc9e6ff619be"
+      "id" = "492a6337-1871-44bc-436d-cc9e6ff619be"
+      "lcs" = tolist([
+        {
+          "col_id" = 1
+          "href" = "/modules/492a6337-1871-44bc-436d-cc9e6ff619be/localConnections/1"
+          "id" = "ec99160f-663e-4c06-bae8-790379a87c63"
+          "module_id" = "modules"
+          "state" = {
+            "client_aid" = "XR-T1"
+            "direction" = "txRx"
+            "dscg_aid" = "XRCARRIERDSCG-1"
+            "lc_aid" = "XRLC-1"
+            "lc_ctrl" = tonumber(null)
+            "line_aid" = ""
+            "remote_client_id" = ""
+            "remote_module_id" = ""
+          }
+        },
+      ])
+      "line_ptps" = tolist(null) /* of object */
+      "otus" = tolist([])
+      "state" = {
+        "config_state" = "ready"
+        "configured_role" = "auto"
+        "connectivity_state" = "inactive"
+        "current_role" = "leaf"
+        "factory_reset_action" = false
+        "hid" = tostring(null)
+        "hport_id" = tostring(null)
+        "hw_description" = {
+          "capabilities" = tomap({
+            "clientCapacity" = "400G"
+            "licenseEnabledAutoLambda" = "Yes"
+            "licenseEnabledEncryption" = "Yes"
+            "licenseEnabledP2mpVti" = "Yes"
+            "licenseEnabledSFM" = "Yes"
+            "prepaidAutoLambda" = "Yes"
+            "prepaidEncryption" = "No"
+            "prepaidP2mpVti" = "Yes"
+            "prepaidSFM" = "Yes"
+            "topology" = "P2MP"
+          })
+          "clei" = "1234567890"
+          "connector_type" = "lcConnector"
+          "form_factor" = "qsfp-dd"
+          "mac_address" = "00:0B:AA:AA:00:03"
+          "mndt" = "2021-03-25"
+          "mnfv" = "1.0.0"
+          "mnhw" = "01"
+          "mnmn" = "Infinera Corporation"
+          "mnmo" = "XRQDCD100MAE2ZZZZ"
+          "pi" = "2ecf35b8-0130-474c-7e1a-33ec771f5add"
+          "piid" = "abb81108-8bbf-4222-9bf3-0a6bbb7579fb"
+          "serial_number" = "AAAA0003"
+          "sv" = "1.00"
+        }
+        "labels" = tomap(null) /* of string */
+        "life_cycle_state" = tostring(null)
+        "module_aid" = "XR"
+        "module_name" = "A-LRN-Leaf3-FL"
+        "restart_action" = "none"
+        "role_status" = "ready"
+        "serdes_rate" = "25"
+        "tc_mode" = false
+        "topology" = "auto"
+        "traffic_mode" = "L1Mode"
+      }
+    },
+    {
+      "config" = {
+        "labels" = tomap(null) /* of string */
+        "module_name" = "A-LRN-Leaf4-MI"
+      }
+      "ethernet_clients" = tolist([
+        {
+          "acs" = tolist([])
+          "col_id" = 1
+          "config" = {
+            "diagnostics" = {
+              "fac_prbs_gen" = tobool(null)
+              "fac_prbs_mon" = tobool(null)
+              "term_lb" = "disabled"
+              "term_lb_duration" = 0
+              "term_prbs_gen" = tobool(null)
+            }
+            "fec_mode" = "enabled"
+            "lldp" = {
+              "admin_status" = "rxOnly"
+              "gcc_fwd" = false
+              "host_rx_drop" = false
+              "ttl_usage" = true
+            }
+          }
+          "href" = "/modules/198de2a4-fb03-47e4-420d-1ef7262294f3/ethernetClients/1"
+          "id" = "cb450689-1583-4107-9b99-a442db5cd78f"
+          "module_id" = "modules"
+          "state" = {
+            "client_if_aid" = "XR-T1"
+            "client_if_port_speed" = 100
+            "diagnostics" = {
+              "fac_lb" = tostring(null)
+              "fac_lb_duration" = tonumber(null)
+              "fac_prbs_gen" = tobool(null)
+              "fac_prbs_mon" = tobool(null)
+              "term_lb" = "disabled"
+              "term_lb_duration" = 0
+              "term_prbs_gen" = tobool(null)
+            }
+            "fec_mode" = "enabled"
+            "fec_type" = "KP4"
+            "life_cycle_state" = tostring(null)
+            "lldp" = {
+              "admin_status" = "rxOnly"
+              "clr_stats" = false
+              "flush_host_db" = false
+              "gcc_fwd" = false
+              "host_rx_drop" = false
+              "lldp_config_aid" = "XR-T1-LLDP1"
+              "neighbors" = tolist(null) /* of object */
+              "too_many_neighbors" = false
+              "ttl_usage" = true
+            }
+          }
+        },
+      ])
+      "href" = "/modules/198de2a4-fb03-47e4-420d-1ef7262294f3"
+      "id" = "198de2a4-fb03-47e4-420d-1ef7262294f3"
+      "lcs" = tolist([])
+      "line_ptps" = tolist(null) /* of object */
+      "otus" = tolist([])
+      "state" = {
+        "config_state" = "ready"
+        "configured_role" = "auto"
+        "connectivity_state" = "inactive"
+        "current_role" = "leaf"
+        "factory_reset_action" = false
+        "hid" = tostring(null)
+        "hport_id" = tostring(null)
+        "hw_description" = {
+          "capabilities" = tomap({
+            "clientCapacity" = "400G"
+            "licenseEnabledAutoLambda" = "Yes"
+            "licenseEnabledEncryption" = "Yes"
+            "licenseEnabledP2mpVti" = "Yes"
+            "licenseEnabledSFM" = "Yes"
+            "prepaidAutoLambda" = "Yes"
+            "prepaidEncryption" = "No"
+            "prepaidP2mpVti" = "Yes"
+            "prepaidSFM" = "Yes"
+            "topology" = "P2MP"
+          })
+          "clei" = "1234567890"
+          "connector_type" = "lcConnector"
+          "form_factor" = "qsfp-dd"
+          "mac_address" = "00:0B:AA:AA:00:04"
+          "mndt" = "2021-03-25"
+          "mnfv" = "1.0.0"
+          "mnhw" = "01"
+          "mnmn" = "Infinera Corporation"
+          "mnmo" = "XRQDCD100MAE2ZZZZ"
+          "pi" = "ebe7a40b-e0f3-4e8b-5283-ca57d66ee7c8"
+          "piid" = "b3a4a1f7-b8b6-4545-af7d-61e89a12789a"
+          "serial_number" = "AAAA0004"
+          "sv" = "1.00"
+        }
+        "labels" = tomap(null) /* of string */
+        "life_cycle_state" = tostring(null)
+        "module_aid" = "XR"
+        "module_name" = "A-LRN-Leaf4-MI"
+        "restart_action" = "none"
+        "role_status" = "ready"
+        "serdes_rate" = "25"
+        "tc_mode" = false
+        "topology" = "auto"
+        "traffic_mode" = "L1Mode"
+      }
+    },
+  ])
+}

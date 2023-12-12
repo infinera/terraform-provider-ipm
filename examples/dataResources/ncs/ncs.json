@@ -1,0 +1,512 @@
+ipm_ncs = {
+  "id" = tostring(null)
+  "ncs" = tolist([
+    {
+      "config" = {
+        "implicit_transport_capacity" = "none"
+        "labels" = tomap({
+          "label1" = "test1"
+          "label2" = "test2"
+          "label3" = "test3"
+        })
+        "mc" = tostring(null)
+        "name" = "Network1"
+        "outer_vid" = tostring(null)
+        "service_mode" = "XR-L1"
+      }
+      "end_points" = tolist([
+        {
+          "acs" = tolist([])
+          "config" = {
+            "capacity" = 100
+            "selector" = {
+              "host_port_selector_by_name" = null /* object */
+              "host_port_selector_by_port_id" = null /* object */
+              "host_port_selector_by_port_source_mac" = null /* object */
+              "host_port_selector_by_sys_name" = null /* object */
+              "module_if_selector_by_module_id" = null /* object */
+              "module_if_selector_by_module_mac" = null /* object */
+              "module_if_selector_by_module_name" = {
+                "module_client_if_aid" = "XR-T1"
+                "module_name" = "A-LRN-Hub-Orlando"
+              }
+              "module_if_selector_by_module_serial_number" = null /* object */
+            }
+          }
+          "href" = "/network-connections/8c6cb584-d096-4edc-b818-c84130687e1b/endpoints/4272890a-3860-4cfc-badd-7f1855e9f759"
+          "id" = "4272890a-3860-4cfc-badd-7f1855e9f759"
+          "state" = {
+            "capacity" = 100
+            "host_port" = {
+              "chassis_id" = "16:2F:FF:00:00:00"
+              "chassis_id_subtype" = "macAddress"
+              "host_name" = tostring(null)
+              "name" = ""
+              "port_descr" = "et-1/0/0:0"
+              "port_id" = tostring(null)
+              "port_id_subtype" = "interfaceName"
+              "port_source_mac" = "58:00:BB:00:00:10"
+              "sys_name" = "Oralando"
+            }
+            "module_if" = {
+              "client_if_aid" = "XR-T1"
+              "client_if_col_id" = 1
+              "client_if_port_speed" = 100
+              "current_role" = "hub"
+              "module_id" = "dfe82597-ba8c-4263-42a0-008e02a2c6a9"
+              "module_name" = "A-LRN-Hub-Orlando"
+              "serial_number" = "000000AAAA"
+            }
+          }
+        },
+        {
+          "acs" = tolist([])
+          "config" = {
+            "capacity" = 100
+            "selector" = {
+              "host_port_selector_by_name" = null /* object */
+              "host_port_selector_by_port_id" = null /* object */
+              "host_port_selector_by_port_source_mac" = null /* object */
+              "host_port_selector_by_sys_name" = null /* object */
+              "module_if_selector_by_module_id" = null /* object */
+              "module_if_selector_by_module_mac" = null /* object */
+              "module_if_selector_by_module_name" = {
+                "module_client_if_aid" = "XR-T1"
+                "module_name" = "A-LRN-Leaf1-BR"
+              }
+              "module_if_selector_by_module_serial_number" = null /* object */
+            }
+          }
+          "href" = "/network-connections/8c6cb584-d096-4edc-b818-c84130687e1b/endpoints/86fa4946-8bf0-4738-a655-40c5c43d79d1"
+          "id" = "86fa4946-8bf0-4738-a655-40c5c43d79d1"
+          "state" = {
+            "capacity" = 100
+            "host_port" = {
+              "chassis_id" = "16:34:FF:00:00:00"
+              "chassis_id_subtype" = "macAddress"
+              "host_name" = tostring(null)
+              "name" = ""
+              "port_descr" = "et-0/0/0:0"
+              "port_id" = tostring(null)
+              "port_id_subtype" = "interfaceName"
+              "port_source_mac" = "58:00:BB:00:01:10"
+              "sys_name" = "Boca Raton"
+            }
+            "module_if" = {
+              "client_if_aid" = "XR-T1"
+              "client_if_col_id" = 1
+              "client_if_port_speed" = 100
+              "current_role" = "leaf"
+              "module_id" = "7bf63f5c-a621-4b13-556c-8142ee127d49"
+              "module_name" = "A-LRN-Leaf1-BR"
+              "serial_number" = "AAAA0000"
+            }
+          }
+        },
+      ])
+      "href" = "/network-connections/8c6cb584-d096-4edc-b818-c84130687e1b"
+      "id" = "8c6cb584-d096-4edc-b818-c84130687e1b"
+      "lcs" = tolist([
+        {
+          "config" = {
+            "client_aid" = "XR-T1"
+            "direction" = "txRx"
+            "dscg_aid" = "XRCARRIERDSCG-2"
+            "lc_ctrl" = tonumber(null)
+            "module_id" = "dfe82597-ba8c-4263-42a0-008e02a2c6a9"
+          }
+          "href" = "/lcs/2f91f2d3-a8ce-4404-b056-af872b0e3df4"
+          "id" = "2f91f2d3-a8ce-4404-b056-af872b0e3df4"
+          "state" = {
+            "client_aid" = "XR-T1"
+            "col_id" = 1
+            "direction" = "txRx"
+            "dscg_aid" = "XRCARRIERDSCG-2"
+            "lc_aid" = "XRLC-1"
+            "lc_ctrl" = tonumber(null)
+            "line_aid" = ""
+            "mac_address" = "00:0B:AA:AA:00:00"
+            "module_id" = "dfe82597-ba8c-4263-42a0-008e02a2c6a9"
+            "remote_client_id" = ""
+            "remote_module_id" = ""
+          }
+        },
+        {
+          "config" = {
+            "client_aid" = "XR-T1"
+            "direction" = "txRx"
+            "dscg_aid" = "XRCARRIERDSCG-2"
+            "lc_ctrl" = tonumber(null)
+            "module_id" = "7bf63f5c-a621-4b13-556c-8142ee127d49"
+          }
+          "href" = "/lcs/f3925879-f52f-4c7d-a808-5b1049b09c10"
+          "id" = "f3925879-f52f-4c7d-a808-5b1049b09c10"
+          "state" = {
+            "client_aid" = "XR-T1"
+            "col_id" = 1
+            "direction" = "txRx"
+            "dscg_aid" = "XRCARRIERDSCG-2"
+            "lc_aid" = "XRLC-1"
+            "lc_ctrl" = tonumber(null)
+            "line_aid" = ""
+            "mac_address" = "00:0B:AA:AA:00:01"
+            "module_id" = "7bf63f5c-a621-4b13-556c-8142ee127d49"
+            "remote_client_id" = ""
+            "remote_module_id" = ""
+          }
+        },
+      ])
+      "state" = {
+        "labels" = tomap({
+          "label1" = "test1"
+          "label2" = "test2"
+          "label3" = "test3"
+        })
+        "lifecycle_state" = "configured"
+        "lifecycle_state_cause" = null /* object */
+        "managed_by" = "cm"
+        "name" = "Network1"
+        "operational_status" = tostring(null)
+        "service_mode" = "XR-L1"
+      }
+    },
+    {
+      "config" = {
+        "implicit_transport_capacity" = "none"
+        "labels" = tomap({
+          "label1" = "test1"
+          "label2" = "test2"
+          "label3" = "test3"
+        })
+        "mc" = tostring(null)
+        "name" = "Network1"
+        "outer_vid" = tostring(null)
+        "service_mode" = "XR-L1"
+      }
+      "end_points" = tolist([
+        {
+          "acs" = tolist([])
+          "config" = {
+            "capacity" = 100
+            "selector" = {
+              "host_port_selector_by_name" = null /* object */
+              "host_port_selector_by_port_id" = null /* object */
+              "host_port_selector_by_port_source_mac" = null /* object */
+              "host_port_selector_by_sys_name" = null /* object */
+              "module_if_selector_by_module_id" = null /* object */
+              "module_if_selector_by_module_mac" = null /* object */
+              "module_if_selector_by_module_name" = {
+                "module_client_if_aid" = "XR-T2"
+                "module_name" = "A-LRN-Hub-Orlando"
+              }
+              "module_if_selector_by_module_serial_number" = null /* object */
+            }
+          }
+          "href" = "/network-connections/e43ef3b5-bb6c-4818-9957-ff3aaee34318/endpoints/118ddbfd-9191-4a76-ab6a-5df2d6b2705f"
+          "id" = "118ddbfd-9191-4a76-ab6a-5df2d6b2705f"
+          "state" = {
+            "capacity" = 100
+            "host_port" = {
+              "chassis_id" = "16:2F:FF:00:00:00"
+              "chassis_id_subtype" = "macAddress"
+              "host_name" = tostring(null)
+              "name" = ""
+              "port_descr" = "et-1/0/0:1"
+              "port_id" = tostring(null)
+              "port_id_subtype" = "interfaceName"
+              "port_source_mac" = "58:00:BB:00:00:11"
+              "sys_name" = "Oralando"
+            }
+            "module_if" = {
+              "client_if_aid" = "XR-T2"
+              "client_if_col_id" = 2
+              "client_if_port_speed" = 100
+              "current_role" = "hub"
+              "module_id" = "dfe82597-ba8c-4263-42a0-008e02a2c6a9"
+              "module_name" = "A-LRN-Hub-Orlando"
+              "serial_number" = "000000AAAA"
+            }
+          }
+        },
+        {
+          "acs" = tolist([])
+          "config" = {
+            "capacity" = 100
+            "selector" = {
+              "host_port_selector_by_name" = null /* object */
+              "host_port_selector_by_port_id" = null /* object */
+              "host_port_selector_by_port_source_mac" = null /* object */
+              "host_port_selector_by_sys_name" = null /* object */
+              "module_if_selector_by_module_id" = null /* object */
+              "module_if_selector_by_module_mac" = null /* object */
+              "module_if_selector_by_module_name" = {
+                "module_client_if_aid" = "XR-T1"
+                "module_name" = "A-LRN-Leaf2-KS"
+              }
+              "module_if_selector_by_module_serial_number" = null /* object */
+            }
+          }
+          "href" = "/network-connections/e43ef3b5-bb6c-4818-9957-ff3aaee34318/endpoints/15b1759a-3794-4886-bbd1-e36d75389835"
+          "id" = "15b1759a-3794-4886-bbd1-e36d75389835"
+          "state" = {
+            "capacity" = 100
+            "host_port" = {
+              "chassis_id" = "16:36:FF:00:00:00"
+              "chassis_id_subtype" = "macAddress"
+              "host_name" = tostring(null)
+              "name" = ""
+              "port_descr" = "et-0/0/0:0"
+              "port_id" = tostring(null)
+              "port_id_subtype" = "interfaceName"
+              "port_source_mac" = "58:00:BB:00:02:10"
+              "sys_name" = "Kissimmee"
+            }
+            "module_if" = {
+              "client_if_aid" = "XR-T1"
+              "client_if_col_id" = 1
+              "client_if_port_speed" = 100
+              "current_role" = "leaf"
+              "module_id" = "ea8a4bef-a9b4-4aa2-5dbb-1900e526dec0"
+              "module_name" = "A-LRN-Leaf2-KS"
+              "serial_number" = "AAAA0002"
+            }
+          }
+        },
+      ])
+      "href" = "/network-connections/e43ef3b5-bb6c-4818-9957-ff3aaee34318"
+      "id" = "e43ef3b5-bb6c-4818-9957-ff3aaee34318"
+      "lcs" = tolist([
+        {
+          "config" = {
+            "client_aid" = "XR-T2"
+            "direction" = "txRx"
+            "dscg_aid" = "XRCARRIERDSCG-3"
+            "lc_ctrl" = tonumber(null)
+            "module_id" = "dfe82597-ba8c-4263-42a0-008e02a2c6a9"
+          }
+          "href" = "/lcs/bc870aa4-bb2a-42ec-a41f-086dbd12a7a2"
+          "id" = "bc870aa4-bb2a-42ec-a41f-086dbd12a7a2"
+          "state" = {
+            "client_aid" = "XR-T2"
+            "col_id" = 2
+            "direction" = "txRx"
+            "dscg_aid" = "XRCARRIERDSCG-3"
+            "lc_aid" = "XRLC-2"
+            "lc_ctrl" = tonumber(null)
+            "line_aid" = ""
+            "mac_address" = "00:0B:AA:AA:00:00"
+            "module_id" = "dfe82597-ba8c-4263-42a0-008e02a2c6a9"
+            "remote_client_id" = ""
+            "remote_module_id" = ""
+          }
+        },
+        {
+          "config" = {
+            "client_aid" = "XR-T1"
+            "direction" = "txRx"
+            "dscg_aid" = "XRCARRIERDSCG-1"
+            "lc_ctrl" = tonumber(null)
+            "module_id" = "ea8a4bef-a9b4-4aa2-5dbb-1900e526dec0"
+          }
+          "href" = "/lcs/2c53baac-66b8-422a-b467-a99c453390c8"
+          "id" = "2c53baac-66b8-422a-b467-a99c453390c8"
+          "state" = {
+            "client_aid" = "XR-T1"
+            "col_id" = 1
+            "direction" = "txRx"
+            "dscg_aid" = "XRCARRIERDSCG-1"
+            "lc_aid" = "XRLC-1"
+            "lc_ctrl" = tonumber(null)
+            "line_aid" = ""
+            "mac_address" = "00:0B:AA:AA:00:02"
+            "module_id" = "ea8a4bef-a9b4-4aa2-5dbb-1900e526dec0"
+            "remote_client_id" = ""
+            "remote_module_id" = ""
+          }
+        },
+      ])
+      "state" = {
+        "labels" = tomap({
+          "label1" = "test1"
+          "label2" = "test2"
+          "label3" = "test3"
+        })
+        "lifecycle_state" = "configured"
+        "lifecycle_state_cause" = null /* object */
+        "managed_by" = "cm"
+        "name" = "Network1"
+        "operational_status" = tostring(null)
+        "service_mode" = "XR-L1"
+      }
+    },
+    {
+      "config" = {
+        "implicit_transport_capacity" = "none"
+        "labels" = tomap({
+          "label1" = "test1"
+          "label2" = "test2"
+          "label3" = "test3"
+        })
+        "mc" = tostring(null)
+        "name" = "Network1"
+        "outer_vid" = tostring(null)
+        "service_mode" = "XR-L1"
+      }
+      "end_points" = tolist([
+        {
+          "acs" = tolist([])
+          "config" = {
+            "capacity" = 100
+            "selector" = {
+              "host_port_selector_by_name" = null /* object */
+              "host_port_selector_by_port_id" = null /* object */
+              "host_port_selector_by_port_source_mac" = null /* object */
+              "host_port_selector_by_sys_name" = null /* object */
+              "module_if_selector_by_module_id" = null /* object */
+              "module_if_selector_by_module_mac" = null /* object */
+              "module_if_selector_by_module_name" = {
+                "module_client_if_aid" = "XR-T3"
+                "module_name" = "A-LRN-Hub-Orlando"
+              }
+              "module_if_selector_by_module_serial_number" = null /* object */
+            }
+          }
+          "href" = "/network-connections/80278486-9451-45ed-947e-d108cddb97d3/endpoints/9a279db1-9dae-4fbd-8140-11077e7eab1b"
+          "id" = "9a279db1-9dae-4fbd-8140-11077e7eab1b"
+          "state" = {
+            "capacity" = 100
+            "host_port" = {
+              "chassis_id" = "16:2F:FF:00:00:00"
+              "chassis_id_subtype" = "macAddress"
+              "host_name" = tostring(null)
+              "name" = ""
+              "port_descr" = "et-1/0/0:2"
+              "port_id" = tostring(null)
+              "port_id_subtype" = "interfaceName"
+              "port_source_mac" = "58:00:BB:00:00:12"
+              "sys_name" = "Oralando"
+            }
+            "module_if" = {
+              "client_if_aid" = "XR-T3"
+              "client_if_col_id" = 3
+              "client_if_port_speed" = 100
+              "current_role" = "hub"
+              "module_id" = "dfe82597-ba8c-4263-42a0-008e02a2c6a9"
+              "module_name" = "A-LRN-Hub-Orlando"
+              "serial_number" = "000000AAAA"
+            }
+          }
+        },
+        {
+          "acs" = tolist([])
+          "config" = {
+            "capacity" = 100
+            "selector" = {
+              "host_port_selector_by_name" = null /* object */
+              "host_port_selector_by_port_id" = null /* object */
+              "host_port_selector_by_port_source_mac" = null /* object */
+              "host_port_selector_by_sys_name" = null /* object */
+              "module_if_selector_by_module_id" = null /* object */
+              "module_if_selector_by_module_mac" = null /* object */
+              "module_if_selector_by_module_name" = {
+                "module_client_if_aid" = "XR-T1"
+                "module_name" = "A-LRN-Leaf3-FL"
+              }
+              "module_if_selector_by_module_serial_number" = null /* object */
+            }
+          }
+          "href" = "/network-connections/80278486-9451-45ed-947e-d108cddb97d3/endpoints/ff110427-43b3-4a43-9a85-c3555e1cdcea"
+          "id" = "ff110427-43b3-4a43-9a85-c3555e1cdcea"
+          "state" = {
+            "capacity" = 100
+            "host_port" = {
+              "chassis_id" = "16:38:FF:00:00:00"
+              "chassis_id_subtype" = "macAddress"
+              "host_name" = tostring(null)
+              "name" = ""
+              "port_descr" = "et-0/0/0:0"
+              "port_id" = tostring(null)
+              "port_id_subtype" = "interfaceName"
+              "port_source_mac" = "58:00:BB:00:03:10"
+              "sys_name" = "Fort Lauderdale"
+            }
+            "module_if" = {
+              "client_if_aid" = "XR-T1"
+              "client_if_col_id" = 1
+              "client_if_port_speed" = 100
+              "current_role" = "leaf"
+              "module_id" = "492a6337-1871-44bc-436d-cc9e6ff619be"
+              "module_name" = "A-LRN-Leaf3-FL"
+              "serial_number" = "AAAA0003"
+            }
+          }
+        },
+      ])
+      "href" = "/network-connections/80278486-9451-45ed-947e-d108cddb97d3"
+      "id" = "80278486-9451-45ed-947e-d108cddb97d3"
+      "lcs" = tolist([
+        {
+          "config" = {
+            "client_aid" = "XR-T3"
+            "direction" = "txRx"
+            "dscg_aid" = "XRCARRIERDSCG-4"
+            "lc_ctrl" = tonumber(null)
+            "module_id" = "dfe82597-ba8c-4263-42a0-008e02a2c6a9"
+          }
+          "href" = "/lcs/9d2e8564-2747-4b46-ae39-6af0ccb850fb"
+          "id" = "9d2e8564-2747-4b46-ae39-6af0ccb850fb"
+          "state" = {
+            "client_aid" = "XR-T3"
+            "col_id" = 3
+            "direction" = "txRx"
+            "dscg_aid" = "XRCARRIERDSCG-4"
+            "lc_aid" = "XRLC-3"
+            "lc_ctrl" = tonumber(null)
+            "line_aid" = ""
+            "mac_address" = "00:0B:AA:AA:00:00"
+            "module_id" = "dfe82597-ba8c-4263-42a0-008e02a2c6a9"
+            "remote_client_id" = ""
+            "remote_module_id" = ""
+          }
+        },
+        {
+          "config" = {
+            "client_aid" = "XR-T1"
+            "direction" = "txRx"
+            "dscg_aid" = "XRCARRIERDSCG-1"
+            "lc_ctrl" = tonumber(null)
+            "module_id" = "492a6337-1871-44bc-436d-cc9e6ff619be"
+          }
+          "href" = "/lcs/49dfbf80-00dc-4072-bbc2-0546d59d1ba8"
+          "id" = "49dfbf80-00dc-4072-bbc2-0546d59d1ba8"
+          "state" = {
+            "client_aid" = "XR-T1"
+            "col_id" = 1
+            "direction" = "txRx"
+            "dscg_aid" = "XRCARRIERDSCG-1"
+            "lc_aid" = "XRLC-1"
+            "lc_ctrl" = tonumber(null)
+            "line_aid" = ""
+            "mac_address" = "00:0B:AA:AA:00:03"
+            "module_id" = "492a6337-1871-44bc-436d-cc9e6ff619be"
+            "remote_client_id" = ""
+            "remote_module_id" = ""
+          }
+        },
+      ])
+      "state" = {
+        "labels" = tomap({
+          "label1" = "test1"
+          "label2" = "test2"
+          "label3" = "test3"
+        })
+        "lifecycle_state" = "configured"
+        "lifecycle_state_cause" = null /* object */
+        "managed_by" = "cm"
+        "name" = "Network1"
+        "operational_status" = tostring(null)
+        "service_mode" = "XR-L1"
+      }
+    },
+  ])
+}

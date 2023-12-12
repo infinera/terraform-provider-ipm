@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "nc_profile1": {
+      "service_mode": "XR-L1"
+    },
+    "nc_profile2": {
+      "service_mode": "XR-L1"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "profiles" : {
+      "user_tc_profile1" : { "capacity_mode" : "portMode", "labels" : { "region" : "North"}, "endpoint_capacity" : 100 }, 
+      "user_tc_profile2" :  { "capacity_mode" : "sharedDownlink", "labels" : { "region" : "South"}, "endpoint_capacity" : 400 }
+  }
+}
