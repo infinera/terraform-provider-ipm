@@ -3,13 +3,19 @@ HOSTNAME=infinera.com
 NAMESPACE=poc
 NAME=ipm
 BINARY=terraform-provider-${NAME}
-VERSION=0.0.1
+VERSION=0.1.0
 OS_ARCH=linux_amd64
 
 default: install
 
 build:
 	go build -o ${BINARY}
+
+registry:
+	go build -o ${BINARY}-${VERSION}
+	zip ${BINARY}-${VERSION}
+	shasum -a 256 *.zip > ${BINARY}-${VERSION}_SHA256SUMS
+	gpg --detach-sign ${BINARY}-${VERSION}_SHA256SUMS
 
 release:
 	GOOS=darwin GOARCH=amd64 go build -o ./bin/${BINARY}_${VERSION}_darwin_amd64
