@@ -32,10 +32,4 @@ override.tf.json
 # Ignore CLI configuration files
 .terraformrc
 terraform.rc
-terraform-provider-ipm_0.2.0_linux_amd64.zip
-.gitignore
-.gitignore
-terraform-provider-ipm_0.2.0_SHA256SUMS.sig
-terraform-provider-ipm_0.2.0_SHA256SUMS
-terraform-provider-ipm_v0.2.0
-.gitignore
+terraform-provider-ipm*
