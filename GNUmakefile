@@ -3,7 +3,7 @@ HOSTNAME=infinera.com
 NAMESPACE=poc
 NAME=ipm
 BINARY=terraform-provider-${NAME}
-VERSION=`git describe --tags --abbrev=0`
+VERSION :=`git describe --tags --abbrev=0`
 OS_ARCH=linux_amd64
 
 default: install
@@ -12,11 +12,11 @@ build:
 	go build -o ${BINARY}
 
 registry:
-    mkdir -p assets
 	go build -o ${BINARY}_v${VERSION}
 	zip ${BINARY}_${VERSION}_${OS_ARCH}.zip ${BINARY}_v${VERSION}
 	shasum -a 256 *.zip > ${BINARY}_${VERSION}_SHA256SUMS
 	gpg --detach-sign ${BINARY}_${VERSION}_SHA256SUMS
+	cp terraform-registry-manifest.json terraform-provider-ipm_${VERSION}_${OS_ARCH}_manifest.json
 
 release:
 	GOOS=darwin GOARCH=amd64 go build -o ./bin/${BINARY}_${VERSION}_darwin_amd64
