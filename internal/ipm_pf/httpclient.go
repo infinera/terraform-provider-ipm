@@ -59,7 +59,6 @@ func NewClient(host, username, password *string) (*Client, error) {
 
 	log.Debugf("NewClient: getTimeout = %d, updateTimeout = %d, deleteTimeout = %d", getTimeout, updateTimeout, deleteTimeout)
 
-	fmt.Printf("NewClient: getTimeout = %d, updateTimeout = %d, deleteTimeout = %d\n", getTimeout, updateTimeout, deleteTimeout)
 
 	c := Client{
 		HTTPClient: &http.Client{Timeout: time.Duration(getTimeout) * time.Second},
