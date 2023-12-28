@@ -535,7 +535,7 @@ func (r *NetworkConnectionResource) delete(plan *NetworkConnectionResourceData, 
 	if plan.Id.IsNull() {
 		diags.AddError(
 			"Error Delete NetworkConnectionResource",
-			"Read: Could not delete. NC ID is not specified",
+			"Delete: Could not delete. NC ID is not specified",
 		)
 		return
 	}
@@ -544,7 +544,7 @@ func (r *NetworkConnectionResource) delete(plan *NetworkConnectionResourceData, 
 	if err != nil {
 		diags.AddError(
 			"NetworkConnectionResource: delete ##: Error Delete NetworkConnectionResource",
-			"Update:Could not delete NetworkConnectionResource, unexpected error: "+err.Error(),
+			"Delete:Could not delete NetworkConnectionResource, unexpected error: "+err.Error(),
 		)
 		return
 	}

@@ -138,12 +138,6 @@ func (r PolPTPResource) Delete(ctx context.Context, req resource.DeleteRequest, 
 
 	resp.Diagnostics.Append(diags...)
 
-	r.delete(&data, ctx, &resp.Diagnostics)
-
-	if resp.Diagnostics.HasError() {
-		return
-	}
-
 	resp.State.RemoveResource(ctx)
 }
 
@@ -282,11 +276,6 @@ func (r *PolPTPResource) read(state *PolPTPResourceData, ctx context.Context, di
 	}
 
 	tflog.Debug(ctx, "PolPTPResource: read ## ", map[string]interface{}{"plan": state})
-}
-
-func (r *PolPTPResource) delete(plan *PolPTPResourceData, ctx context.Context, diags *diag.Diagnostics) {
-
-	tflog.Debug(ctx, "PolPTPResource: delete ## ", map[string]interface{}{"plan": plan})
 }
 
 func (polPtpData *PolPTPResourceData) populate(data map[string]interface{}, ctx context.Context, diags *diag.Diagnostics) {

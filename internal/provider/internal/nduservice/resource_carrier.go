@@ -36,8 +36,8 @@ type CarrierResource struct {
 type CarrierDiagnostics struct {
 	TermLB         types.String `tfsdk:"term_lb"`
 	TermLBDuration types.Int64  `tfsdk:"term_lb_duration"`
-	FacPRBSGen     types.Bool   `tfsdk:"fac_prbs_gen"`
-	FacPRBSMon     types.Bool   `tfsdk:"fac_prbs_mon"`
+	FacLB         types.String `tfsdk:"fac_lb"`
+	FacLBDuration types.Int64  `tfsdk:"fac_lb_duration"`
 }
 
 type CarrierConfig struct {
@@ -430,12 +430,12 @@ func CarrierResourceSchemaAttributes() map[string]schema.Attribute {
 							Description: "term_lb_duration",
 							Optional:    true,
 						},
-						"fac_prbs_gen": schema.BoolAttribute{
-							Description: "fac_prbs_gen",
+						"fac_lb": schema.StringAttribute{
+							Description: "fac_lb",
 							Optional:    true,
 						},
-						"fac_prbs_mon": schema.BoolAttribute{
-							Description: "fac_prbs_mon",
+						"fac_lb_duration": schema.Int64Attribute{
+							Description: "fac_lb_duration",
 							Optional:    true,
 						},
 					},
@@ -623,8 +623,8 @@ func CarrierDiagnosticsAttributeType() map[string]attr.Type {
 	return map[string]attr.Type{
 		"term_lb":          types.StringType,
 		"term_lb_duration": types.Int64Type,
-		"fac_prbs_gen":     types.BoolType,
-		"fac_prbs_mon":     types.BoolType,
+		"fac_lb":          types.StringType,
+		"fac_lb_duration": types.Int64Type,
 	}
 }
 
@@ -638,20 +638,19 @@ func CarrierDiagnosticsAttributeValue(diagnostics map[string]interface{}) map[st
 		termLBDuration = types.Int64Value(int64(diagnostics["termLBDuration"].(float64)))
 	}
 
-	facPRBSGen := types.BoolNull()
-	if diagnostics["facPRBSGen"] != nil {
-		facPRBSGen = types.BoolValue(diagnostics["facPRBSGen"].(bool))
+	facLB := types.StringNull()
+	if diagnostics["facLB"] != nil {
+		facLB = types.StringValue(diagnostics["facLB"].(string))
 	}
-
-	facPRBSMon := types.BoolNull()
-	if diagnostics["facPRBSMon"] != nil {
-		facPRBSMon = types.BoolValue(diagnostics["facPRBSMon"].(bool))
+	facLBDuration := types.Int64Null()
+	if diagnostics["facLBDuration"] != nil {
+		facLBDuration = types.Int64Value(int64(diagnostics["facLBDuration"].(float64)))
 	}
 
 	return map[string]attr.Value{
 		"term_lb":          termLB,
 		"term_lb_duration": termLBDuration,
-		"fac_prbs_gen":     facPRBSGen,
-		"fac_prbs_mon":     facPRBSMon,
+		"fac_lb":     facLB,
+		"fac_lb_duration":     facLBDuration,
 	}
 }

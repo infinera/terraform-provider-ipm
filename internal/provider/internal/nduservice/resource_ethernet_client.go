@@ -39,9 +39,9 @@ type EClientDiagnostics struct {
 	TermLBDuration types.Int64  `tfsdk:"term_lb_duration"`
 	FacLB          types.String `tfsdk:"fac_lb"`
 	FacLBDuration  types.Int64  `tfsdk:"fac_lb_duration"`
-	FacTestingGen  types.Bool   `tfsdk:"fac_testing_gen"`
-	FacTestingMon  types.Bool   `tfsdk:"fac_testing_mon"`
-	TermTestingGen types.Bool   `tfsdk:"term_testing_gen"`
+	FacTestingSignalGen  types.Bool   `tfsdk:"fac_testing_signal_gen"`
+	FacTestingSignalMon  types.Bool   `tfsdk:"fac_testing_signal_mon"`
+	TermTestingSignalGen types.Bool   `tfsdk:"term_testing_signal_gen"`
 }
 
 type EClientConfig struct {
@@ -205,14 +205,14 @@ func (r *EClientResource) update(plan *EClientResourceData, ctx context.Context,
 	if !plan.Config.Diagnostics.FacLBDuration.IsNull() {
 		diagnostics["facLBDuration"] = plan.Config.Diagnostics.FacLBDuration.ValueInt64()
 	}
-	if !plan.Config.Diagnostics.FacTestingGen.IsNull() {
-		diagnostics["facTestingGen"] = plan.Config.Diagnostics.FacTestingGen.ValueBool()
+	if !plan.Config.Diagnostics.FacTestingSignalGen.IsNull() {
+		diagnostics["facTestingSignalGen"] = plan.Config.Diagnostics.FacTestingSignalGen.ValueBool()
 	}
-	if !plan.Config.Diagnostics.FacTestingMon.IsNull() {
-		diagnostics["facTestingMon"] = plan.Config.Diagnostics.FacTestingMon.ValueBool()
+	if !plan.Config.Diagnostics.FacTestingSignalMon.IsNull() {
+		diagnostics["facTestingSignalMon"] = plan.Config.Diagnostics.FacTestingSignalMon.ValueBool()
 	}
-	if !plan.Config.Diagnostics.TermTestingGen.IsNull() {
-		diagnostics["termTestingGen"] = plan.Config.Diagnostics.TermTestingGen.ValueBool()
+	if !plan.Config.Diagnostics.TermTestingSignalGen.IsNull() {
+		diagnostics["termTestingGen"] = plan.Config.Diagnostics.TermTestingSignalGen.ValueBool()
 	}
 	if len(diagnostics) > 0 {
 		updateRequest["diagnostics"] = diagnostics
@@ -380,14 +380,14 @@ func (eClientData *EClientResourceData) populate(data map[string]interface{}, ct
 				if diagnostics["facLBDuration"] != nil && !eClientData.Config.Diagnostics.FacLBDuration.IsNull() {
 					eClientData.Config.Diagnostics.FacLBDuration = types.Int64Value(int64(v.(float64)))
 				}
-				if diagnostics["facTestingGen"] != nil && !eClientData.Config.Diagnostics.FacTestingGen.IsNull() {
-					eClientData.Config.Diagnostics.FacTestingGen = types.BoolValue(v.(bool))
+				if diagnostics["facTestingSignalGen"] != nil && !eClientData.Config.Diagnostics.FacTestingSignalGen.IsNull() {
+					eClientData.Config.Diagnostics.FacTestingSignalGen = types.BoolValue(v.(bool))
 				}
-				if diagnostics["facTestingMon"] != nil && !eClientData.Config.Diagnostics.FacTestingMon.IsNull() {
-					eClientData.Config.Diagnostics.FacTestingMon = types.BoolValue(v.(bool))
+				if diagnostics["facTestingSignalMon"] != nil && !eClientData.Config.Diagnostics.FacTestingSignalMon.IsNull() {
+					eClientData.Config.Diagnostics.FacTestingSignalMon = types.BoolValue(v.(bool))
 				}
-				if diagnostics["termTestingGen"] != nil && !eClientData.Config.Diagnostics.TermTestingGen.IsNull() {
-					eClientData.Config.Diagnostics.TermTestingGen = types.BoolValue(v.(bool))
+				if diagnostics["termTestingSignalGen"] != nil && !eClientData.Config.Diagnostics.TermTestingSignalGen.IsNull() {
+					eClientData.Config.Diagnostics.TermTestingSignalGen = types.BoolValue(v.(bool))
 				}
 			}
 		}
@@ -452,16 +452,16 @@ func EClientResourceSchemaAttributes() map[string]schema.Attribute {
 							Description: "fac_lb_duration",
 							Optional:    true,
 						},
-						"fac_testing_gen": schema.StringAttribute{
-							Description: "fac_testing_gen",
+						"fac_testing_signal_gen": schema.StringAttribute{
+							Description: "fac_testing_signal_gen",
 							Optional:    true,
 						},
-						"fac_testing_mon": schema.StringAttribute{
-							Description: "fac_testing_mon",
+						"fac_testing_signal_mon": schema.StringAttribute{
+							Description: "fac_testing_signal_mon",
 							Optional:    true,
 						},
-						"term_testing_gen": schema.StringAttribute{
-							Description: "term_testing_gen",
+						"term_testing_signal_gen": schema.StringAttribute{
+							Description: "term_testing_signal_gen",
 							Optional:    true,
 						},
 					},

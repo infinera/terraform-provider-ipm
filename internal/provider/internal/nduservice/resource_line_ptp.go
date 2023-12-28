@@ -138,10 +138,6 @@ func (r LinePTPResource) Delete(ctx context.Context, req resource.DeleteRequest,
 
 	resp.Diagnostics.Append(diags...)
 
-	if resp.Diagnostics.HasError() {
-		return
-	}
-
 	resp.State.RemoveResource(ctx)
 }
 
@@ -286,11 +282,6 @@ func (r *LinePTPResource) read(state *LinePTPResourceData, ctx context.Context, 
 	}
 
 	tflog.Debug(ctx, "LinePTPResource: read ## ", map[string]interface{}{"plan": state})
-}
-
-func (r *LinePTPResource) delete(plan *LinePTPResourceData, ctx context.Context, diags *diag.Diagnostics) {
-
-	tflog.Debug(ctx, "LinePTPResource: delete ## ", map[string]interface{}{"plan": plan})
 }
 
 func (linePtpData *LinePTPResourceData) populate(data map[string]interface{}, ctx context.Context, diags *diag.Diagnostics) {

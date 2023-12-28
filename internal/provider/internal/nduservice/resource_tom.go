@@ -308,28 +308,6 @@ func (r *TOMResource) update(plan *TOMResourceData, ctx context.Context, diags *
 	tflog.Debug(ctx, "TOMResource: update ##", map[string]interface{}{"plan": plan})
 }
 
-func (r *TOMResource) delete(plan *TOMResourceData, ctx context.Context, diags *diag.Diagnostics) {
-
-	if plan.Href.IsNull() && plan.Id.IsNull() {
-		diags.AddError(
-			"Error Delete TOMResource",
-			"Read: Could not delete. NC ID is not specified",
-		)
-		return
-	}
-
-	_, err := r.client.ExecuteIPMHttpCommand("DELETE", plan.Href.ValueString(), nil)
-	if err != nil {
-		diags.AddError(
-			"TOMResource: delete ##: Error Delete TOMResource",
-			"Update:Could not delete TOMResource, unexpected error: "+err.Error(),
-		)
-		return
-	}
-
-	tflog.Debug(ctx, "TOMResource: delete ## ", map[string]interface{}{"plan": plan})
-}
-
 func (r *TOMResource) read(state *TOMResourceData, ctx context.Context, diags *diag.Diagnostics) {
 
 	if state.Id.IsNull() && state.Href.IsNull() && state.Identifier.Href.IsNull() && state.Identifier.DeviceId.IsNull() && (!state.Identifier.DeviceId.IsNull() && (state.Identifier.ColId.IsNull() || state.Identifier.ParentColId.IsNull()) && state.Identifier.Aid.IsNull() && state.Identifier.Id.IsNull()) {
@@ -395,6 +373,28 @@ func (r *TOMResource) read(state *TOMResourceData, ctx context.Context, diags *d
 	}
 
 	tflog.Debug(ctx, "TOMResource: read ## ", map[string]interface{}{"plan": state})
+}
+
+func (r *TOMResource) delete(state *TOMResourceData, ctx context.Context, diags *diag.Diagnostics) {
+
+	if state.Href.IsNull() && state.Id.IsNull() {
+		diags.AddError(
+			"Error Delete TOMResource",
+			"Delete: Could not delete. Both NC ID and Href are not specified",
+		)
+		return
+	}
+
+	_, err := r.client.ExecuteIPMHttpCommand("DELETE", state.Href.ValueString(), nil)
+	if err != nil {
+		diags.AddError(
+			"TOMResource: delete ##: Error Delete NDUResource",
+			"Delete:Could not delete TOMResource, unexpected error: "+err.Error(),
+		)
+		return
+	}
+
+	tflog.Debug(ctx, "TOMResource: delete ## ", map[string]interface{}{"state": state.Href.ValueString()})
 }
 
 func (tomData *TOMResourceData) populate(data map[string]interface{}, ctx context.Context, diags *diag.Diagnostics) {

@@ -159,7 +159,7 @@ func (r ModuleResource) Delete(ctx context.Context, req resource.DeleteRequest, 
 
 	resp.Diagnostics.Append(diags...)
 
-	//r.delete(&data, ctx, &resp.Diagnostics)
+	r.delete(&data, ctx, &resp.Diagnostics)
 
 	if resp.Diagnostics.HasError() {
 		return
@@ -314,6 +314,28 @@ func (r *ModuleResource) read(state *ModuleResourceData, ctx context.Context, di
 	}
 
 	tflog.Debug(ctx, "ModuleResource: read ## ", map[string]interface{}{"plan": state})
+}
+
+func (r *ModuleResource) delete(plan *ModuleResourceData, ctx context.Context, diags *diag.Diagnostics) {
+
+	if plan.Id.IsNull() {
+		diags.AddError(
+			"Error Delete Module",
+			"Delete: Could not delete. Module ID is not specified",
+		)
+		return
+	}
+
+	_, err := r.client.ExecuteIPMHttpCommand("DELETE", "/moduless/"+plan.Id.ValueString(), nil)
+	if err != nil {
+		diags.AddError(
+			"ModuleResource: delete ##: Error Delete ModuleResource",
+			"Delete:Could not delete ModuleResource, unexpected error: "+err.Error(),
+		)
+		return
+	}
+
+	tflog.Debug(ctx, "ModuleResource: delete ## ", map[string]interface{}{"plan": plan})
 }
 
 

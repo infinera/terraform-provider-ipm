@@ -377,10 +377,10 @@ func (r *VOAResource) read(state *VOAResourceData, ctx context.Context, diags *d
 	tflog.Debug(ctx, "VOAResource: read ## ", map[string]interface{}{"plan": state})
 }
 
-func (r *VOAResource) delete(plan *VOAResourceData, ctx context.Context, diags *diag.Diagnostics) {
-	tflog.Debug(ctx, "VOAResource: delete ## ", map[string]interface{}{"plan": plan})
+func (r *VOAResource) delete(state *VOAResourceData, ctx context.Context, diags *diag.Diagnostics) {
+	tflog.Debug(ctx, "VOAResource: delete ## ", map[string]interface{}{"state": state})
 
-		if plan.Href.IsNull() && plan.Id.IsNull() {
+		if state.Href.IsNull() && state.Id.IsNull() {
 			diags.AddError(
 				"Error Delete VOAResource",
 				"Read: Could not delete. NC ID is not specified",
@@ -388,7 +388,7 @@ func (r *VOAResource) delete(plan *VOAResourceData, ctx context.Context, diags *
 			return
 		}
 	
-		_, err := r.client.ExecuteIPMHttpCommand("DELETE", plan.Href.ValueString(), nil)
+		_, err := r.client.ExecuteIPMHttpCommand("DELETE", state.Href.ValueString(), nil)
 		if err != nil {
 			diags.AddError(
 				"VOAResource: delete ##: Error Delete VOAResource",
@@ -397,7 +397,7 @@ func (r *VOAResource) delete(plan *VOAResourceData, ctx context.Context, diags *
 			return
 		}
 	
-		tflog.Debug(ctx, "VOAResource: delete ## ", map[string]interface{}{"plan": plan})
+		tflog.Debug(ctx, "VOAResource: delete ## ", map[string]interface{}{"state": state})
 }
 
 func (voaData *VOAResourceData) populate(data map[string]interface{}, ctx context.Context, diags *diag.Diagnostics) {

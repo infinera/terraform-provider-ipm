@@ -300,9 +300,9 @@ func (r *XRResource) update(plan *XRResourceData, ctx context.Context, diags *di
 	tflog.Debug(ctx, "XRResource: update ##", map[string]interface{}{"plan": plan})
 }
 
-func (r *XRResource) delete(plan *XRResourceData, ctx context.Context, diags *diag.Diagnostics) {
+func (r *XRResource) delete(state *XRResourceData, ctx context.Context, diags *diag.Diagnostics) {
 
-	if plan.Href.IsNull() && plan.Id.IsNull() {
+	if state.Href.IsNull() && state.Id.IsNull() {
 		diags.AddError(
 			"Error Delete XRResource",
 			"Read: Could not delete. NC ID is not specified",
@@ -310,7 +310,7 @@ func (r *XRResource) delete(plan *XRResourceData, ctx context.Context, diags *di
 		return
 	}
 
-	_, err := r.client.ExecuteIPMHttpCommand("DELETE", plan.Href.ValueString(), nil)
+	_, err := r.client.ExecuteIPMHttpCommand("DELETE", state.Href.ValueString(), nil)
 	if err != nil {
 		diags.AddError(
 			"XRResource: delete ##: Error Delete XRResource",
@@ -319,7 +319,7 @@ func (r *XRResource) delete(plan *XRResourceData, ctx context.Context, diags *di
 		return
 	}
 
-	tflog.Debug(ctx, "XRResource: delete ## ", map[string]interface{}{"plan": plan})
+	tflog.Debug(ctx, "XRResource: delete ## ", map[string]interface{}{"state": state})
 }
 
 func (r *XRResource) read(state *XRResourceData, ctx context.Context, diags *diag.Diagnostics) {

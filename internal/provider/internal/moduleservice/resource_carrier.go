@@ -48,7 +48,7 @@ type CarrierResourceData struct {
 	Href       types.String              `tfsdk:"href"`
 	ColId      types.Int64               `tfsdk:"col_id"`
 	Identifier common.ResourceIdentifier `tfsdk:"identifier"`
-	Config     *CarrierConfig             `tfsdk:"config"`
+	Config     *CarrierConfig            `tfsdk:"config"`
 	State      types.Object              `tfsdk:"state"`
 	DSCGs      types.List                `tfsdk:"dscgs"`
 	DSCs       types.List                `tfsdk:"dscs"`

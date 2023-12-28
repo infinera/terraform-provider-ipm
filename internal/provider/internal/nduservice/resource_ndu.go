@@ -151,7 +151,7 @@ func (r NDUResource) Delete(ctx context.Context, req resource.DeleteRequest, res
 
 	diags := req.State.Get(ctx, &data)
 
-	tflog.Debug(ctx, "NDUResource: Update", map[string]interface{}{"NDUResourceData": data})
+	tflog.Debug(ctx, "NDUResource: Delete", map[string]interface{}{"NDUResourceData": data})
 
 	resp.Diagnostics.Append(diags...)
 	if resp.Diagnostics.HasError() {

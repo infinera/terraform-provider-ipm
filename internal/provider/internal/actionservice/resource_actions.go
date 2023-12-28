@@ -210,36 +210,74 @@ func getActionCommand(resourceAction ResourceAction) (string, error) {
 	if  resourceAction.RawAction.IsNull() || !resourceAction.RawAction.ValueBool() {
 		resourceType := resourceAction.Type.ValueString()
 		deviceId := resourceAction.Identifier.DeviceId.ValueString()
+		action := resourceAction.Action.ValueString()
+		if len(action) == 0 {
+			return "", errors.New("Action is not specified.")
+		}
 		switch resourceType {
-			case "module": 
-			//modules/{deviceId}/coldStart|warmStart|factoryReset|retry
-				return "/modules/" + deviceId + "/" + resourceAction.Action.ValueString(), nil;
 			case "NDU": 
-				//ndus/{deviceId}/coldStart|warmStart|factoryReset|retry
-					return "/ndus/" + deviceId + "/" + resourceAction.Action.ValueString(), nil;
+				// '/ndus/{deviceId}/coldStart|warmStart|factoryReset|retry|adopt'
+					return "/ndus/" + deviceId + "/" + action, nil;
+			case "NDU Port": 
+				// '/ndus/{nduId}/ports/{nduPortColId}/retry|adopt'
+				return "/ndus/" + deviceId  + "/ports/" + resourceAction.Identifier.ParentColId.ValueString() + "/" + action, nil;
+			case "NDU TOM": 
+				// '/ndus/{nduId}/ports/{nduPortColId}/tom/{nduTomColId}/retry|adopt'
+				return "/ndus/" + deviceId  + "/ports/" + resourceAction.Identifier.ParentColId.ValueString() + "/tom/" + resourceAction.Identifier.ColId.ValueString() + "/" + action, nil;
 			case "NDU XR": 
-				///ndus/{nduId}/ports/{nduPortColId}/xr/{nduXrColId}/coldStart
-					return "/ndus/" + deviceId  + "/ports/" + resourceAction.Identifier.ParentColId.ValueString() + "/xr/" + resourceAction.Identifier.ColId.ValueString() + "/" + resourceAction.Action.ValueString(), nil;
-			case "ethernet client":
-				//'/modules/{deviceId}/ethernetClients/{ethernetColId}/clrLldpStats|flushLldpHostDb|retry';
-				return "/modules/" + deviceId  + "/ethernetClients/" + resourceAction.Identifier.ColId.ValueString() + "/" + resourceAction.Action.ValueString(), nil;
-			case "otu" :
-				//'/modules/{deviceId}/otus/{otuColId}/retry'
-				return "/modules/" + deviceId  + "/otus/" + resourceAction.Identifier.ColId.ValueString() + "/" + resourceAction.Action.ValueString(), nil;
-			case "odu" :
-				//'/modules/{deviceId}/otus/{otuColId}/odus/{oduColId}/retry'
-				return "/modules/" + deviceId  + "/otus/" + resourceAction.Identifier.ParentColId.ValueString() + "/odus/" + resourceAction.Identifier.ColId.ValueString() + "/" + resourceAction.Action.ValueString(), nil;
-			case "carrier" :
-				///modules/{deviceId}/linePtps/{linePtpColId}/carriers/{carrierColId}/retry
-				return "/modules/" + deviceId  + "/linePtps/" + resourceAction.Identifier.ParentColId.ValueString() + "/carriers/" + resourceAction.Identifier.ColId.ValueString() + "/" + resourceAction.Action.ValueString(), nil;
-			case "dsc":
-				///modules/{deviceId}/linePtps/{linePtpColId}/carriers/{carrierColId}/dscs/{dscColId}/retry
-				return "/modules/" + deviceId  + "/linePtps/" + resourceAction.Identifier.GrandParentColId.ValueString() + "/carriers/" + resourceAction.Identifier.ParentColId.ValueString() + "/dscs/" + resourceAction.Identifier.ColId.ValueString() + "/" + resourceAction.Action.ValueString(), nil;
+				// '/ndus/{nduId}/ports/{nduPortColId}/xr/{nduXrColId}/coldStart|warmStart|factoryReset|retry|adopt'
+				return "/ndus/" + deviceId  + "/ports/" + resourceAction.Identifier.ParentColId.ValueString() + "/xr/" + resourceAction.Identifier.ColId.ValueString() + "/" + action, nil;
+			case "NDU EDFA": 
+				// '/ndus/{nduId}/ports/{nduPortColId}/edfa/{nduEdfaColId}/retry|adopt'
+				return "/ndus/" + deviceId  + "/ports/" + resourceAction.Identifier.ParentColId.ValueString() + "/edfa/" + resourceAction.Identifier.ColId.ValueString() + "/" + action, nil;
+			case "NDU VOA": 
+				// '/ndus/{nduId}/ports/{nduPortColId}/voa/{nduVoaColId}/retry|adopt'
+				return "/ndus/" + deviceId  + "/ports/" + resourceAction.Identifier.ParentColId.ValueString() + "/voa/" + resourceAction.Identifier.ColId.ValueString() + "/" + action, nil;
+			case "NDU Line PTP": 
+				// '/ndus/{nduId}/ports/{nduPortColId}/linePtps/{nduLinePtpColId}/retry|adopt'
+				return "/ndus/" + deviceId  + "/ports/" + resourceAction.Identifier.ParentColId.ValueString() + "/linePtps/" + resourceAction.Identifier.ColId.ValueString() + "/" + action, nil;
+			case "NDU Trib PTP": 
+				// '/ndus/{nduId}/ports/{nduPortColId}/tripPtps/{nduTribPtpColId}/retry|adopt'
+				return "/ndus/" + deviceId  + "/ports/" + resourceAction.Identifier.ParentColId.ValueString() + "/tribPtps/" + resourceAction.Identifier.ColId.ValueString() + "/" + action, nil;
+			case "NDU POL PTP": 
+				// '/ndus/{nduId}/ports/{nduPortColId}/tom/{nduPolPtpColId}/retry|adopt'
+				return "/ndus/" + deviceId  + "/ports/" + resourceAction.Identifier.ParentColId.ValueString() + "/polPtps/" + resourceAction.Identifier.ColId.ValueString() + "/" + action, nil;
+			case "NDU Carrier": 
+				// '/ndus/{nduId}/ports/{nduPortColId}/linePtps/{nduLinePtpColId}/carrier/{carrierColId}/retry|adopt
+				return "/ndus/" + deviceId  + "/ports/" + resourceAction.Identifier.GrandParentColId.ValueString() + "/linePtps/" + resourceAction.Identifier.ParentColId.ValueString() + "/carrier/" + resourceAction.Identifier.ColId.ValueString() + "/" + action, nil;
+			case "NDU OTU" :
+				// '/ndus/{deviceId}/otus/{otuColId}/retry'
+				return "/ndus/" + deviceId  + "/otus/" + resourceAction.Identifier.ColId.ValueString() + "/" + action, nil;
+			case "NDU Ethernet Client":
+				// '/modules/{deviceId}/ethernetClients/{ethernetColId}/clrLldpStats|flushLldpHostDb|retry';
+				return "/ndus/" + deviceId  + "/ethernets/" + resourceAction.Identifier.ColId.ValueString() + "/" + action, nil;
+			case "Module": 
+				// '/modules/{deviceId}/coldStart|warmStart|factoryReset|retry'
+					return "/modules/" + deviceId + "/" + action, nil;
+			case "Ethernet Client":
+				// '/modules/{deviceId}/ethernetClients/{ethernetColId}/clrLldpStats|flushLldpHostDb|retry';
+				return "/modules/" + deviceId  + "/ethernetClients/" + resourceAction.Identifier.ColId.ValueString() + "/" + action, nil;
+			case "OTU" :
+				// '/modules/{deviceId}/otus/{otuColId}/retry'
+				return "/modules/" + deviceId  + "/otus/" + resourceAction.Identifier.ColId.ValueString() + "/" + action, nil;
+			case "ODU" :
+				// '/modules/{deviceId}/otus/{otuColId}/odus/{oduColId}/retry'
+				return "/modules/" + deviceId  + "/otus/" + resourceAction.Identifier.ParentColId.ValueString() + "/odus/" + resourceAction.Identifier.ColId.ValueString() + "/" + action, nil;
+			case "Carrier" :
+				// '/modules/{deviceId}/linePtps/{linePtpColId}/carriers/{carrierColId}/retry'
+				return "/modules/" + deviceId  + "/linePtps/" + resourceAction.Identifier.ParentColId.ValueString() + "/carriers/" + resourceAction.Identifier.ColId.ValueString() + "/" + action, nil;
+			case "DSC":
+				// '/modules/{deviceId}/linePtps/{linePtpColId}/carriers/{carrierColId}/dscs/{dscColId}/retry'
+				return "/modules/" + deviceId  + "/linePtps/" + resourceAction.Identifier.GrandParentColId.ValueString() + "/carriers/" + resourceAction.Identifier.ParentColId.ValueString() + "/dscs/" + resourceAction.Identifier.ColId.ValueString() + "/" + action, nil;
+			case "DSCG":
+				// '/modules/{deviceId}/linePtps/{linePtpColId}/carriers/{carrierColId}/dsgs/{dsgColId}/retry'
+				return "/modules/" + deviceId  + "/linePtps/" + resourceAction.Identifier.GrandParentColId.ValueString() + "/carriers/" + resourceAction.Identifier.ParentColId.ValueString() + "/dsgs/" + resourceAction.Identifier.ColId.ValueString() + "/" + action, nil;
+	        default:
+				return "", errors.New("Invalid Resource Type: " + resourceType)
 		}
 	} else {
 		return resourceAction.Action.ValueString(), nil
 	}
-	return "", errors.New("can't send action.")
 }
 
 func actionsResourceSchemaAttributes() map[string]schema.Attribute { 

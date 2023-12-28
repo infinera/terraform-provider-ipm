@@ -382,9 +382,9 @@ func (r *EDFAResource) read(state *EDFAResourceData, ctx context.Context, diags 
 	
 }
 
-func (r *EDFAResource) delete(plan *EDFAResourceData, ctx context.Context, diags *diag.Diagnostics) {
+func (r *EDFAResource) delete(state *EDFAResourceData, ctx context.Context, diags *diag.Diagnostics) {
 
-	if plan.Href.IsNull() && plan.Id.IsNull() {
+	if state.Href.IsNull() && state.Id.IsNull() {
 		diags.AddError(
 			"Error Delete EDFAResource",
 			"Read: Could not delete. EDFAResource Href and ID is not specified",
@@ -392,7 +392,7 @@ func (r *EDFAResource) delete(plan *EDFAResourceData, ctx context.Context, diags
 		return
 	}
 
-	_, err := r.client.ExecuteIPMHttpCommand("DELETE", plan.Href.ValueString(), nil)
+	_, err := r.client.ExecuteIPMHttpCommand("DELETE", state.Href.ValueString(), nil)
 	if err != nil {
 		diags.AddError(
 			"EDFAResource: delete ##: Error Delete EDFAResource",
@@ -401,7 +401,7 @@ func (r *EDFAResource) delete(plan *EDFAResourceData, ctx context.Context, diags
 		return
 	}
 
-	tflog.Debug(ctx, "EDFAResource: delete ## ", map[string]interface{}{"plan": plan})
+	tflog.Debug(ctx, "EDFAResource: delete ## ", map[string]interface{}{"state": state})
 }
 
 func (edfaData *EDFAResourceData) populate(data map[string]interface{}, ctx context.Context, diags *diag.Diagnostics) {

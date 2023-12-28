@@ -140,12 +140,6 @@ func (r TribPTPResource) Delete(ctx context.Context, req resource.DeleteRequest,
 
 	resp.Diagnostics.Append(diags...)
 
-	r.delete(&data, ctx, &resp.Diagnostics)
-
-	if resp.Diagnostics.HasError() {
-		return
-	}
-
 	resp.State.RemoveResource(ctx)
 }
 
@@ -289,11 +283,6 @@ func (r *TribPTPResource) read(state *TribPTPResourceData, ctx context.Context, 
 	}
 
 	tflog.Debug(ctx, "TribPTPResource: read ## ", map[string]interface{}{"plan": state})
-}
-
-func (r *TribPTPResource) delete(plan *TribPTPResourceData, ctx context.Context, diags *diag.Diagnostics) {
-
-	tflog.Debug(ctx, "TribPTPResource: delete ## ", map[string]interface{}{"plan": plan})
 }
 
 func (tribPtpData *TribPTPResourceData) populate(data map[string]interface{}, ctx context.Context, diags *diag.Diagnostics) {

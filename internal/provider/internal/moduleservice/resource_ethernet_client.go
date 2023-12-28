@@ -44,13 +44,12 @@ type EClientConfigLLDP struct {
 type EClientConfigDiagnostics struct {
 	TermLB         types.String `tfsdk:"term_lb"`
 	TermLBDuration types.Int64  `tfsdk:"term_lb_duration"`
-	FacPRBSGen     types.Bool   `tfsdk:"fac_prbs_gen"`
-	FacPRBSMon     types.Bool   `tfsdk:"fac_prbs_mon"`
-	TermPRBSGen    types.Bool   `tfsdk:"term_prbs_gen"`
+	TermTestSignalGen     types.String   `tfsdk:"term_test_signal_gen"`
 }
 
 type EClientConfig struct {
 	FecMode     types.String             `tfsdk:"fec_mode"`
+	MaxPktLen   types.Int64              `tfsdk:"max_pkt_len"`
 	LLDP        EClientConfigLLDP        `tfsdk:"lldp"`
 	Diagnostics EClientConfigDiagnostics `tfsdk:"diagnostics"`
 }
@@ -184,7 +183,9 @@ func (r *EClientResource) update(plan *EClientResourceData, ctx context.Context,
 	if !plan.Config.FecMode.IsNull() {
 		updateRequest["fecMode"] = plan.Config.FecMode.ValueString()
 	}
-
+	if !plan.Config.MaxPktLen.IsNull() {
+		updateRequest["maxPktLen"] = plan.Config.MaxPktLen.ValueInt64()
+	}
 	// get LLDP
 	var lldp = make(map[string]interface{})
 
@@ -212,14 +213,8 @@ func (r *EClientResource) update(plan *EClientResourceData, ctx context.Context,
 	if !plan.Config.Diagnostics.TermLBDuration.IsNull() {
 		diagnostics["termLBDuration"] = plan.Config.Diagnostics.TermLBDuration.ValueInt64()
 	}
-	if !plan.Config.Diagnostics.FacPRBSGen.IsNull() {
-		diagnostics["facPRBSGen"] = plan.Config.Diagnostics.FacPRBSGen.ValueBool()
-	}
-	if !plan.Config.Diagnostics.FacPRBSMon.IsNull() {
-		diagnostics["facPRBSMon"] = plan.Config.Diagnostics.FacPRBSMon.ValueBool()
-	}
-	if !plan.Config.Diagnostics.TermPRBSGen.IsNull() {
-		diagnostics["termPRBSGen"] = plan.Config.Diagnostics.TermPRBSGen.ValueBool()
+	if !plan.Config.Diagnostics.TermTestSignalGen.IsNull() {
+		diagnostics["termTestSignalGen"] = plan.Config.Diagnostics.TermTestSignalGen.ValueString()
 	}
 
 	if len(diagnostics) > 0 {
@@ -366,6 +361,10 @@ func (eClientData *EClientResourceData) populate(data map[string]interface{}, ct
 			if !eClientData.Config.FecMode.IsNull() {
 				eClientData.Config.FecMode = types.StringValue(v.(string))
 			}
+		case "maxPktLen":
+			if !eClientData.Config.MaxPktLen.IsNull() {
+				eClientData.Config.MaxPktLen = types.Int64Value(int64(v.(float64)))
+			}
 		case "lldp":
 			lldp := v.(map[string]interface{})
 			if lldp["adminStatus"] != nil && !eClientData.Config.LLDP.AdminStatus.IsNull() {
@@ -388,14 +387,8 @@ func (eClientData *EClientResourceData) populate(data map[string]interface{}, ct
 			if diagnostics["termLBDuration"] != nil && !eClientData.Config.Diagnostics.TermLBDuration.IsNull() {
 				eClientData.Config.Diagnostics.TermLBDuration = types.Int64Value(int64(v.(float64)))
 			}
-			if diagnostics["facPRBSGen"] != nil && !eClientData.Config.Diagnostics.FacPRBSGen.IsNull() {
-				eClientData.Config.Diagnostics.FacPRBSGen = types.BoolValue(v.(bool))
-			}
-			if diagnostics["facPRBSMon"] != nil && !eClientData.Config.Diagnostics.FacPRBSMon.IsNull() {
-				eClientData.Config.Diagnostics.FacPRBSMon = types.BoolValue(v.(bool))
-			}
-			if diagnostics["termPRBSGen"] != nil && !eClientData.Config.Diagnostics.TermPRBSGen.IsNull() {
-				eClientData.Config.Diagnostics.TermPRBSGen = types.BoolValue(v.(bool))
+			if diagnostics["termTestSignalGen"] != nil && !eClientData.Config.Diagnostics.TermTestSignalGen.IsNull() {
+				eClientData.Config.Diagnostics.TermTestSignalGen = types.StringValue(v.(string))
 			}
 		}
 	}
@@ -449,8 +442,13 @@ func EClientResourceSchemaAttributes(computeEntity_optional ...bool) map[string]
 					Computed:    computeFlag,
 					Optional:    optionalFlag,
 				},
+				"max_pkt_len": schema.StringAttribute{
+					Description: "fec_mode",
+					Computed:    computeFlag,
+					Optional:    optionalFlag,
+				},
 				"lldp": schema.SingleNestedAttribute{
-					Description: "diagnostics",
+					Description: "max_pkt_len",
 					Computed:    computeFlag,
 					Optional:    optionalFlag,
 					Attributes: map[string]schema.Attribute{
@@ -491,18 +489,8 @@ func EClientResourceSchemaAttributes(computeEntity_optional ...bool) map[string]
 							Computed:    computeFlag,
 							Optional:    optionalFlag,
 						},
-						"fac_prbs_gen": schema.StringAttribute{
-							Description: "facPRBSGen",
-							Computed:    computeFlag,
-							Optional:    optionalFlag,
-						},
-						"fac_prbs_mon": schema.Int64Attribute{
-							Description: "fac_prbs_mon",
-							Computed:    computeFlag,
-							Optional:    optionalFlag,
-						},
-						"term_prbs_gen": schema.StringAttribute{
-							Description: "term_prbs_gen",
+						"term_test_signal_gen": schema.StringAttribute{
+							Description: "term_test_signal_gen",
 							Computed:    computeFlag,
 							Optional:    optionalFlag,
 						},
@@ -596,6 +584,7 @@ func EClientAttributeValue(eClient map[string]interface{}) map[string]attr.Value
 func EClientConfigAttributeType() map[string]attr.Type {
 	return map[string]attr.Type{
 		"fec_mode":    types.StringType,
+		"max_pkt_len":    types.Int64Type,
 		"lldp":        types.ObjectType{AttrTypes: EClientConfigLLDPAttributeType()},
 		"diagnostics": types.ObjectType{AttrTypes: EClientConfigDiagnosticsAttributeType()},
 	}
@@ -605,6 +594,10 @@ func EClientConfigAttributeValue(eClientConfig map[string]interface{}) map[strin
 	fecMode := types.StringNull()
 	if eClientConfig["fecMode"] != nil {
 		fecMode = types.StringValue(eClientConfig["fecMode"].(string))
+	}
+	maxPktLen := types.Int64Null()
+	if eClientConfig["maxPktLen"] != nil {
+		maxPktLen = types.Int64Value(int64(eClientConfig["maxPktLen"].(float64)))
 	}
 	lldp := types.ObjectNull(EClientConfigLLDPAttributeType())
 	if (eClientConfig["lldp"]) != nil {
@@ -617,6 +610,7 @@ func EClientConfigAttributeValue(eClientConfig map[string]interface{}) map[strin
 
 	return map[string]attr.Value{
 		"fec_mode":    fecMode,
+		"max_pkt_len": maxPktLen,
 		"lldp":        lldp,
 		"diagnostics": diagnostics,
 	}
@@ -661,6 +655,7 @@ func EClientConfigLLDPAttributeValue(lldp map[string]interface{}) map[string]att
 func EClientStateLLDPAttributeType() map[string]attr.Type {
 	return map[string]attr.Type{
 		"lldp_config_aid":    types.StringType,
+		"parent_aid":         types.StringType,
 		"admin_status":       types.StringType,
 		"gcc_fwd":            types.BoolType,
 		"host_rx_drop":       types.BoolType,
@@ -676,6 +671,10 @@ func EClientStateLLDPAttributeValue(lldp map[string]interface{}) map[string]attr
 	lldpconfigAid := types.StringNull()
 	if lldp["lldpconfigAid"] != nil {
 		lldpconfigAid = types.StringValue(lldp["lldpconfigAid"].(string))
+	}
+	parentAid := types.StringNull()
+	if lldp["parentAid"] != nil {
+		parentAid = types.StringValue(lldp["parentAid"].(string))
 	}
 	adminStatus := types.StringNull()
 	if lldp["adminStatus"] != nil {
@@ -712,6 +711,7 @@ func EClientStateLLDPAttributeValue(lldp map[string]interface{}) map[string]attr
 
 	return map[string]attr.Value{
 		"lldp_config_aid":    lldpconfigAid,
+		"parent_aid":         parentAid,
 		"admin_status":       adminStatus,
 		"gcc_fwd":            gccFwd,
 		"host_rx_drop":       hostRxDrop,
@@ -730,6 +730,7 @@ func EClientStateAttributeType() map[string]attr.Type {
 		"client_if_port_speed": types.Int64Type,
 		"fec_type":             types.StringType,
 		"fec_mode":             types.StringType,
+		"max_pkt_len":     		types.Int64Type,
 		"lldp":                 types.ObjectType{AttrTypes: EClientStateLLDPAttributeType()},
 		"diagnostics":          types.ObjectType{AttrTypes: EClientStateDiagnosticsAttributeType()},
 		"life_cycle_state":     types.StringType,
@@ -756,6 +757,11 @@ func EClientStateAttributeValue(eClientState map[string]interface{}) map[string]
 		fecMode = types.StringValue(eClientState["fecMode"].(string))
 	}
 
+	maxPktLen := types.Int64Null()
+	if eClientState["maxPktLen"] != nil {
+		maxPktLen = types.Int64Value(int64(eClientState["maxPktLen"].(float64)))
+	}
+
 	clientIfPortSpeed := types.Int64Null()
 	if eClientState["clientIfPortSpeed"] != nil {
 		clientIfPortSpeed = types.Int64Value(int64(eClientState["clientIfPortSpeed"].(float64)))
@@ -779,6 +785,7 @@ func EClientStateAttributeValue(eClientState map[string]interface{}) map[string]
 		"client_if_port_speed": clientIfPortSpeed,
 		"fec_type":             fecType,
 		"fec_mode":             fecMode,
+		"max_pkt_len":        	maxPktLen,
 		"lldp":                 lldp,
 		"diagnostics":          diagnostics,
 		"life_cycle_state":     lifecycleState,
@@ -789,9 +796,7 @@ func EClientConfigDiagnosticsAttributeType() map[string]attr.Type {
 	return map[string]attr.Type{
 		"term_lb":          types.StringType,
 		"term_lb_duration": types.Int64Type,
-		"fac_prbs_gen":     types.BoolType,
-		"fac_prbs_mon":     types.BoolType,
-		"term_prbs_gen":    types.BoolType,
+		"term_test_signal_gen":     types.StringType,
 	}
 }
 
@@ -804,25 +809,15 @@ func EClientConfigDiagnosticsAttributeValue(diagnostics map[string]interface{}) 
 	if diagnostics["termLBDuration"] != nil {
 		termLBDuration = types.Int64Value(int64(diagnostics["termLBDuration"].(float64)))
 	}
-	facPRBSGen := types.BoolNull()
-	if diagnostics["facPRBSGen"] != nil {
-		facPRBSGen = types.BoolValue(diagnostics["facPRBSGen"].(bool))
-	}
-	facPRBSMon := types.BoolNull()
-	if diagnostics["facPRBSMon"] != nil {
-		facPRBSMon = types.BoolValue(diagnostics["facPRBSMon"].(bool))
-	}
-	termPRBSGen := types.BoolNull()
-	if diagnostics["termPRBSGen"] != nil {
-		termPRBSGen = types.BoolValue(diagnostics["termPRBSGen"].(bool))
+	termTestSignalGen := types.StringNull()
+	if diagnostics["termTestSignalGen"] != nil {
+		termTestSignalGen = types.StringValue(diagnostics["termTestSignalGen"].(string))
 	}
 
 	return map[string]attr.Value{
 		"term_lb":          termLB,
 		"term_lb_duration": termLBDuration,
-		"fac_prbs_gen":     facPRBSGen,
-		"fac_prbs_mon":     facPRBSMon,
-		"term_prbs_gen":    termPRBSGen,
+		"term_test_signal_gen":     termTestSignalGen,
 	}
 }
 
@@ -830,11 +825,7 @@ func EClientStateDiagnosticsAttributeType() map[string]attr.Type {
 	return map[string]attr.Type{
 		"term_lb":          types.StringType,
 		"term_lb_duration": types.Int64Type,
-		"fac_lb":           types.StringType,
-		"fac_lb_duration":  types.Int64Type,
-		"fac_prbs_gen":     types.BoolType,
-		"fac_prbs_mon":     types.BoolType,
-		"term_prbs_gen":    types.BoolType,
+		"term_test_signal_gen":           types.StringType,
 	}
 }
 
@@ -847,35 +838,15 @@ func EClientStateDiagnosticsAttributeValue(diagnostics map[string]interface{}) m
 	if diagnostics["termLBDuration"] != nil {
 		termLBDuration = types.Int64Value(int64(diagnostics["termLBDuration"].(float64)))
 	}
-	facLB := types.StringNull()
-	if diagnostics["facLB"] != nil {
-		facLB = types.StringValue(diagnostics["facLB"].(string))
-	}
-	facLBDuration := types.Int64Null()
-	if diagnostics["facLBDuration"] != nil {
-		facLBDuration = types.Int64Value(int64(diagnostics["facLBDuration"].(float64)))
-	}
-	facPRBSGen := types.BoolNull()
-	if diagnostics["facPRBSGen"] != nil {
-		facPRBSGen = types.BoolValue(diagnostics["facPRBSGen"].(bool))
-	}
-	facPRBSMon := types.BoolNull()
-	if diagnostics["facPRBSMon"] != nil {
-		facPRBSMon = types.BoolValue(diagnostics["facPRBSMon"].(bool))
-	}
-	termPRBSGen := types.BoolNull()
-	if diagnostics["termPRBSGen"] != nil {
-		termPRBSGen = types.BoolValue(diagnostics["termPRBSGen"].(bool))
+	termTestSignalGen := types.StringNull()
+	if diagnostics["termTestSignalGen"] != nil {
+		termTestSignalGen = types.StringValue(diagnostics["termTestSignalGen"].(string))
 	}
 
 	return map[string]attr.Value{
 		"term_lb":          termLB,
 		"term_lb_duration": termLBDuration,
-		"fac_lb":           facLB,
-		"fac_lb_duration":  facLBDuration,
-		"fac_prbs_gen":     facPRBSGen,
-		"fac_prbs_mon":     facPRBSMon,
-		"term_prbs_gen":    termPRBSGen,
+		"term_test_signal_gen":     termTestSignalGen,
 	}
 }
 
@@ -900,6 +871,7 @@ func EClientLLDPNeighborObjectsValue(data []interface{}) []attr.Value {
 
 func EClientLLDPNeighborAttributeType() map[string]attr.Type {
 	return map[string]attr.Type{
+		"parent_aid":         types.StringType,
 		"host_neighbor_aid":  types.StringType,
 		"chassis_id_subtype": types.StringType,
 		"chassis_id":         types.StringType,
@@ -914,6 +886,7 @@ func EClientLLDPNeighborAttributeType() map[string]attr.Type {
 }
 
 func EClientLLDPNeighborAttributeValue(neighbors map[string]interface{}) map[string]attr.Value {
+	parentAid := types.StringNull()
 	hostneighborAid := types.StringNull()
 	chassisIdSubtype := types.StringNull()
 	chassisId := types.StringNull()
@@ -927,6 +900,8 @@ func EClientLLDPNeighborAttributeValue(neighbors map[string]interface{}) map[str
 
 	for k, v := range neighbors {
 		switch k {
+		case "parentAid":
+			parentAid = types.StringValue(v.(string))
 		case "hostneighborAid":
 			hostneighborAid = types.StringValue(v.(string))
 		case "chassisIdSubtype":
@@ -949,6 +924,7 @@ func EClientLLDPNeighborAttributeValue(neighbors map[string]interface{}) map[str
 	}
 
 	return map[string]attr.Value{
+		"parent_aid":         parentAid,
 		"host_neighbor_aid":  hostneighborAid,
 		"chassis_id_subtype": chassisIdSubtype,
 		"chassis_id":         chassisId,
