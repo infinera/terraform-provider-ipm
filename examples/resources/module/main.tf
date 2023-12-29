@@ -1,7 +1,7 @@
 terraform {
   required_providers {
     ipm = {
-      source = "infinera.com/poc/ipm"
+      source = "infinera/ipm"
     }
   }
 }
@@ -26,7 +26,7 @@ provider "ipm" {
 
 resource "ipm_module" "module" {
   identifier = {
-    device_id = "6bfbcdb7-a7ef-4ea2-6281-129cbac6d25d"
+    device_id = "ed4c1d56-07a4-4552-4b60-34575ee04c13"
   }
   config = { 
       debug_port_access = "disabled"

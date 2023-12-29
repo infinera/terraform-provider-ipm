@@ -195,11 +195,11 @@ func (r *CarrierResource) update(plan *CarrierResourceData, ctx context.Context,
 	if !plan.Config.Diagnostics.TermLBDuration.IsNull() {
 		diagnostics["termLBDuration"] = plan.Config.Diagnostics.TermLBDuration.ValueInt64()
 	}
-	if !plan.Config.Diagnostics.FacPRBSGen.IsNull() {
-		diagnostics["facPRBSGen"] = plan.Config.Diagnostics.FacPRBSGen.ValueBool()
+	if !plan.Config.Diagnostics.FacLB.IsNull() {
+		diagnostics["facLB"] = plan.Config.Diagnostics.FacLB.ValueString()
 	}
-	if !plan.Config.Diagnostics.FacPRBSMon.IsNull() {
-		diagnostics["facPRBSMon"] = plan.Config.Diagnostics.FacPRBSMon.ValueBool()
+	if !plan.Config.Diagnostics.FacLBDuration.IsNull() {
+		diagnostics["facLBDuration"] = plan.Config.Diagnostics.FacLBDuration.ValueInt64()
 	}
 	if len(diagnostics) > 0 {
 		updateRequest["diagnostics"] = diagnostics
@@ -361,11 +361,11 @@ func (carrierData *CarrierResourceData) populate(data map[string]interface{}, ct
 			if diagnostics["termLBDuration"] != nil && !carrierData.Config.Diagnostics.TermLBDuration.IsNull() {
 				carrierData.Config.Diagnostics.TermLBDuration = types.Int64Value(int64(v.(float64)))
 			}
-			if diagnostics["facPRBSGen"] != nil && !carrierData.Config.Diagnostics.FacPRBSGen.IsNull() {
-				carrierData.Config.Diagnostics.FacPRBSGen = types.BoolValue(v.(bool))
+			if diagnostics["facLB"] != nil && !carrierData.Config.Diagnostics.FacLB.IsNull() {
+				carrierData.Config.Diagnostics.FacLB = types.StringValue(v.(string))
 			}
-			if diagnostics["facPRBSMon"] != nil && !carrierData.Config.Diagnostics.FacPRBSMon.IsNull() {
-				carrierData.Config.Diagnostics.FacPRBSMon = types.BoolValue(v.(bool))
+			if diagnostics["facLBDuration"] != nil && !carrierData.Config.Diagnostics.FacLBDuration.IsNull() {
+				carrierData.Config.Diagnostics.FacLBDuration = types.Int64Value(int64(v.(float64)))
 			}
 		}
 	}
