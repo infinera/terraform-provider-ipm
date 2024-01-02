@@ -1,10 +1,11 @@
 TEST?=$$(go list ./... | grep -v 'vendor')
-HOSTNAME=infinera.com
+HOSTNAME=terraform.local
 NAMESPACE=infinera
 NAME=ipm
 BINARY=terraform-provider-${NAME}
 VERSION :=`git describe --tags --abbrev=0`
-OS_ARCH=linux_amd64
+#OS_ARCH=linux_amd64
+OS_ARCH=linux_386
 
 default: install
 
@@ -31,6 +32,11 @@ release:
 	GOOS=solaris GOARCH=amd64 go build -o ./bin/${BINARY}_${VERSION}_solaris_amd64
 	GOOS=windows GOARCH=386 go build -o ./bin/${BINARY}_${VERSION}_windows_386
 	GOOS=windows GOARCH=amd64 go build -o ./bin/${BINARY}_${VERSION}_windows_amd64
+
+
+install2: build
+	mkdir -p ~/.terraform.d/plugins/${HOSTNAME}/${NAMESPACE}/${NAME}/${VERSION}/${OS_ARCH}
+	mv ${BINARY} ~/.terraform.d/plugins/${HOSTNAME}/${NAMESPACE}/${NAME}/${VERSION}/${OS_ARCH}
 
 install: build
 	mkdir -p ~/.terraform.d/plugins/${NAMESPACE}/${NAME}/${VERSION}/${OS_ARCH}

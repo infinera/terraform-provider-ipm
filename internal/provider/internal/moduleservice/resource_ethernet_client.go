@@ -674,7 +674,8 @@ func EClientStateLLDPAttributeValue(lldp map[string]interface{}) map[string]attr
 	}
 	parentAid := types.StringNull()
 	if lldp["parentAid"] != nil {
-		parentAid = types.StringValue(lldp["parentAid"].(string))
+		parentAids := lldp["parentAid"].([]interface{})
+		parentAid = types.StringValue(parentAids[0].(string))
 	}
 	adminStatus := types.StringNull()
 	if lldp["adminStatus"] != nil {
@@ -901,7 +902,8 @@ func EClientLLDPNeighborAttributeValue(neighbors map[string]interface{}) map[str
 	for k, v := range neighbors {
 		switch k {
 		case "parentAid":
-			parentAid = types.StringValue(v.(string))
+			parentAids := v.([]interface{})
+			parentAid = types.StringValue(parentAids[0].(string))
 		case "hostneighborAid":
 			hostneighborAid = types.StringValue(v.(string))
 		case "chassisIdSubtype":

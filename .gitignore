@@ -33,3 +33,4 @@ override.tf.json
 .terraformrc
 terraform.rc
 terraform-provider-ipm*
+examples/resources/module/.terraform.lock.hcl
